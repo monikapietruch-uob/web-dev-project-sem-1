@@ -1,0 +1,27 @@
+/* =====================================================================
+   css/track.css
+   A track page: the heading and the list of tasks, grouped by stage.
+   ===================================================================== */
+/* ---------- track pages ---------- */
+.trackhead{padding:44px 0 30px;border-bottom:1px solid var(--track)}
+.trackhead .kicker{color:var(--alt)}
+.trackhead h1{font:700 clamp(40px,6vw,78px)/1.02 var(--f-display);letter-spacing:.09em;text-transform:uppercase;margin:0 0 14px}
+.trackhead p{max-width:58ch;font-size:20px;margin:0 0 .5em}
+.trackhead .progress{margin-top:20px;max-width:560px;--tc:var(--track)}
+.stage{display:grid;grid-template-columns:240px minmax(0,1fr);gap:8px 30px;padding:26px 0;border-bottom:1px solid var(--line)}
+.stage-name h2{font:700 22px/1.1 var(--f-display);letter-spacing:.14em;text-transform:uppercase;color:var(--stage);margin:8px 0 6px}
+.stage-name p{font-size:16px;color:var(--dim);margin:0}
+.stations{list-style:none;margin:0;padding:0;position:relative}
+.stations::before{content:"";position:absolute;left:18px;top:22px;bottom:22px;width:8px;background:var(--stage);border-radius:4px}
+.station{margin:0}
+.station a{display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:2px 16px;padding:7px 14px 7px 0;text-decoration:none;position:relative;color:var(--ink)}
+.station a:hover{background:var(--card);color:var(--ink)}
+.st-n{width:44px;height:44px;border-radius:50%;background:var(--paper);border:4.5px solid var(--stage);display:grid;place-items:center;font:700 15px var(--f-code);color:var(--ink)}
+.station.is-done .st-n{background:var(--stage);color:#07101f}
+.st-title{font-weight:500;font-size:19px}
+.st-meta{font-size:13px;color:var(--dim);white-space:nowrap;display:flex;gap:10px;align-items:center}
+@media (max-width:760px){
+  .stage{grid-template-columns:minmax(0,1fr)}
+  .station a{grid-template-columns:44px minmax(0,1fr)}
+  .st-meta{grid-column:2}
+}
