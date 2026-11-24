@@ -32,6 +32,7 @@
   --warn:#ffb020; --warn-bg:rgba(255,176,32,.13);
   --bad:#ff8080; --bad-bg:rgba(255,128,128,.13);
   --alert:#d92027; --alert-bg:#4d0b10; --alert-ink:#ffffff;   /* the red message under an editor */
+  --mark:#ff5a5f;                                             /* the red pen: the frame and the arrow of a link that must not be missed */
   --code-bg:#050915; --code-ink:#ddfaff;
   /* type */
   --f-display:"Outfit","TeX Gyre Adventor","Century Gothic","Avant Garde",system-ui,sans-serif;

@@ -117,15 +117,28 @@ function renderShadow(box, code) {
 // "In the browser": a small picture of the page that a piece of code makes.
 // In the task:  <div class="codelook"> <pre class="code">the code</pre> <div class="look" data-look="what it shows, in words"></div> </div>
 // The picture is drawn from the code in the <pre>, so the two can never disagree.
+// Two more things are possible, both written in red like a note on a handout:
+//   data-tab-note="words"                       a note under the tab, with an arrow that points up at it
+//   data-mark="h1" data-mark-note="words"       a note under the first <h1> on the small page, with an arrow that points up at it (any CSS selector works)
+const PEN_CSS = '.pv-note{display:flex;align-items:center;gap:8px;margin:3px 0 0 12px;font:700 13px/1.3 system-ui,sans-serif;letter-spacing:0;color:#c4161c}' +
+  '.pv-note::before{content:"";flex:none;width:16px;height:22px;background:#c4161c;clip-path:polygon(33% 100%,33% 44%,0 44%,50% 0,100% 44%,67% 44%,67% 100%)}';
 function initLooks() {
   $$('[data-look]').forEach(box => {
     const pre = box.previousElementSibling;
     if (!pre) return;
-    const html = pre.textContent, title = /<title>([^<]*)<\/title>/i.exec(html);
+    const d = box.dataset, html = pre.textContent, title = /<title>([^<]*)<\/title>/i.exec(html);
     const page = h('div', {class: 'look-page'});
-    box.append(h('p', {class: 'look-bar'}, h('span', {text: 'In the browser'}),
-      title ? h('span', {class: 'look-tab', text: title[1]}) : null), page);
+    const tab = title ? h('span', {class: 'look-tab', text: title[1]}) : null;
+    if (tab && d.tabNote) { tab.append(h('span', {class: 'pen-note up', text: d.tabNote})); page.classList.add('has-tabnote'); }
+    box.append(h('p', {class: 'look-bar'}, h('span', {text: 'In the browser'}), tab), page);
     renderShadow(page, {html: html, css: 'img{max-width:100%;height:auto}'});
+    const root = page.firstChild && page.firstChild.shadowRoot, marked = root && d.mark ? root.querySelector(d.mark) : null;
+    if (marked && d.markNote) {
+      const style = document.createElement('style');
+      style.textContent = PEN_CSS;
+      root.append(style);
+      marked.append(h('span', {class: 'pv-note', text: d.markNote}));
+    }
     box.setAttribute('role', 'img');
     box.setAttribute('aria-label', 'In the browser: ' + box.dataset.look);
   });
@@ -284,7 +297,9 @@ Pg.prototype.build = function () {
   this.frameBox = h('div', {class: 'pg-frame'});
   this.console = h('p', {class: 'pg-console', role: 'status', hidden: true});
   this.flag = h('b', {class: 'pg-flag', hidden: true, 'aria-hidden': 'true'});
-  const bar = h('div', {class: 'pg-outbar'}, h('span', {}, 'Result', this.flag));
+  // the small tab that shows the words of the <title>. It stays hidden when the code has no <title>.
+  this.tabName = h('span', {class: 'pg-tabname', hidden: true});
+  const bar = h('div', {class: 'pg-outbar'}, h('span', {}, 'Result', this.flag), this.tabName);
   if (this.mode === 'run') {
     const runBtn = h('button', {type: 'button', class: 'btn small primary', text: 'Run'});
     runBtn.addEventListener('click', () => self.render());
@@ -320,6 +335,17 @@ Pg.prototype.build = function () {
   Object.keys(this.answer).forEach(lang => {
     answerBox.append(h('h5', {text: self.files[lang] || lang}), h('pre', {class: 'code'}, paintAnswer(self.answer[lang], lang)));
   });
+  // Under the code: what to do with it. The words fit an answer of one file or two, an editor with two tabs,
+  // and an editor with a Run button.
+  const answered = Object.keys(this.answer);
+  if (answered.length) {
+    const next = h('p', {class: 'pg-next'}, h('b', {text: 'Now copy this code into the editor above. '}));
+    if (answered.length > 1) next.append('Each piece goes into the file with the same name, so click that tab first. ');
+    // Two tabs but one answer: name the file, so that nobody pastes CSS into the HTML file.
+    else if (this.langs.length > 1) next.append('It goes into the file ', h('b', {text: this.files[answered[0]] || answered[0]}), ', so click that tab first. ');
+    next.append(this.mode === 'run' ? 'Then click Run, and look at the result in the small browser next to the editor.' : 'Then look at the result in the small browser next to the editor.');
+    answerBox.append(next);
+  }
   const answerBtn = h('button', {type: 'button', class: 'btn small', 'aria-expanded': 'false', text: 'Show a model answer'});
   answerBtn.addEventListener('click', () => {
     answerBox.hidden = !answerBox.hidden;
@@ -409,6 +435,15 @@ Pg.prototype.check = function () {
   if (problem) this.hint.append(h('span', {class: 'pg-bang', 'aria-hidden': 'true', text: '!'}), h('span', {text: problem.text}));
   // the flag above the result
   this.flag.hidden = !problem;
+  // The title is not on the page. A browser writes it on the tab, so the editor writes it on a small tab too.
+  const named = /<title[^>]*>([^<]*)<\/title>/i.exec(code.html || '');
+  this.tabName.hidden = !named;
+  if (named) {
+    const words = named[1].replace(/\s+/g, ' ').trim();
+    this.tabName.textContent = words || 'no title yet';
+    this.tabName.classList.toggle('is-empty', !words);
+    this.tabName.setAttribute('aria-label', words ? 'The tab of the browser shows the title: ' + words : 'The tab of the browser is empty: the page has no title yet');
+  }
   this.flag.textContent = problem ? (problem.kind === 'open' ? 'Not finished' : 'Check your code') : '';
   // the mark on the line number
   const bad = problem && problem.line ? problem.lang + ':' + problem.line : '';

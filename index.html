@@ -608,7 +608,9 @@
       </details>
     </div>
     <div class="block" data-label="Find a fourth">
-      <p class="read">This list has hundreds of developer portfolios: <a href="https://github.com/emmabostian/developer-portfolios">developer-portfolios on GitHub</a>. Choose one that you like.</p>
+      <p class="read">This list has hundreds of developer portfolios. Open it, and choose one that you like.</p>
+      <!-- class="arrow-link" gives a link a red frame and a red arrow, so that nobody misses it. Any link can have it. -->
+      <p class="read"><a class="arrow-link" href="https://github.com/emmabostian/developer-portfolios">developer-portfolios on GitHub</a></p>
       <div class="field read">
         <label for="look2-link">Its address</label>
         <input class="line" type="text" id="look2-link" data-save="look2-link">
@@ -645,12 +647,13 @@
     <span class="hl">&lt;p&gt;I study computer science.&lt;/p&gt;</span>
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-        <div class="look" data-look="a browser tab with the words Robin Vale, Portfolio. On the page, the heading Robin Vale and the sentence I study computer science."></div>
+        <!-- data-tab-note writes a red note under the tab. data-mark and data-mark-note write one under a thing on the small page. -->
+        <div class="look" data-tab-note="This is the title" data-mark="h1" data-mark-note="A heading, not the title" data-look="a browser tab with the words Robin Vale, Portfolio. A red arrow under the tab points at it and says: this is the title. On the page, the big heading Robin Vale. A red arrow under it says: a heading, not the title. Then the sentence I study computer science."></div>
       </div>
       <div class="cards3 full">
         <div class="site"><p class="label">Copy</p><h3>The skeleton</h3><p>Every line that is not highlighted, from <code>&lt;!DOCTYPE html&gt;</code> at the top to <code>&lt;/html&gt;</code> at the bottom. These lines are the same on every page. Nobody types them from memory. Everybody copies them.</p></div>
-        <div class="site"><p class="label">Place 1</p><h3>The title</h3><p>The words between <code>&lt;title&gt;</code> and <code>&lt;/title&gt;</code>. They are the name of the page. You see them on the browser tab, not on the page.</p></div>
-        <div class="site"><p class="label">Place 2</p><h3>The body</h3><p>Everything between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code>. This is the page that visitors see. Here it is one heading and one paragraph.</p></div>
+        <div class="site"><p class="label">Place 1</p><h3>The title</h3><p>The words between <code>&lt;title&gt;</code> and <code>&lt;/title&gt;</code>. They are the name of the page. You see them on the browser tab, not on the page. The big “Robin Vale” on the page is <b>not</b> the title. It is a heading, and it comes from Place 2.</p></div>
+        <div class="site"><p class="label">Place 2</p><h3>The body</h3><p>Everything between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code>. This is the page that visitors see. Here it is one heading, the big “Robin Vale”, and one paragraph.</p></div>
       </div>
       <p class="read">Later you will make files of your own. Start each one with the skeleton. This button copies it, with the two places empty.</p>
 <pre id="skeleton-text" hidden>&lt;!DOCTYPE html&gt;
@@ -685,7 +688,7 @@
     <div class="block" data-label="Practise">
       <p class="read">The skeleton is already in the editor. You write in the two places. Type the lines, or copy them from the example above and change the words.</p>
       <ol class="steps read">
-        <li>Line 5: between <code>&lt;title&gt;</code> and <code>&lt;/title&gt;</code>, type a name for your page.</li>
+        <li>Line 5: between <code>&lt;title&gt;</code> and <code>&lt;/title&gt;</code>, type a name for your page. Watch the small tab above the result. Your words appear there, and not on the page.</li>
         <li>Line 8: type <code>&lt;h1&gt;</code>, then your name, then <code>&lt;/h1&gt;</code>.</li>
         <li>Press Enter. On the new line, type <code>&lt;p&gt;</code>, then one sentence about you, then <code>&lt;/p&gt;</code>.</li>
       </ol>
@@ -750,9 +753,9 @@
       <p class="read"><b>Think:</b> what happens if a page has three <code>&lt;h1&gt;</code> headings?</p>
       <details class="reveal read">
         <summary>Check your answer</summary>
-        <p>Nothing explodes. The page still works. But it is now a book with three front covers, and nobody can tell what the page is about.</p>
+        <p>Nothing explodes. The page still works. But it is now a book with three front cover titles, and nobody can tell what the page is about.</p>
         <p><b>The rule is there for accessibility.</b> A person who cannot see the screen uses a screen reader, a program that reads the page aloud. It can read out only the headings, like a list of contents, and jump to the part that the person wants. So the headings have to make sense as a list. Search engines read the headings too.</p>
-        <p><b>One <code>&lt;h1&gt;</code>, then <code>&lt;h2&gt;</code>.</b> Use <code>&lt;h1&gt;</code> once, for the name of the whole page. Use <code>&lt;h2&gt;</code> for each part of the page. Two, three or more <code>&lt;h2&gt;</code> headings are fine. A book has one front cover and many chapters.</p>
+        <p><b>One <code>&lt;h1&gt;</code>, then <code>&lt;h2&gt;</code>.</b> Use <code>&lt;h1&gt;</code> once, for the name of the whole page. Use <code>&lt;h2&gt;</code> for each part of the page. Two, three or more <code>&lt;h2&gt;</code> headings are fine. A book has one front cover title and many chapter titles: the <code>&lt;h1&gt;</code> is the front cover title, and each <code>&lt;h2&gt;</code> is a chapter title.</p>
 <pre class="code"><code>&lt;h1&gt;Robin Vale&lt;/h1&gt;
 &lt;h2&gt;About me&lt;/h2&gt;
 &lt;h2&gt;Skills&lt;/h2&gt;
@@ -762,7 +765,7 @@
     <div class="block" data-label="Practise">
       <p class="read">Write your own About me. You can type every line. Or look at the example above and copy a whole line: select it, copy it, and paste it into the editor. Then change the words between the tags, so that they are about you.</p>
       <p class="read">The paragraph line is a good one to copy. The tags <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code> come with it, and you only change the sentence inside. Developers do this all day.</p>
-      <p class="read quiet">To copy, press Ctrl + C. To paste, press Ctrl + V. On a Mac, press Cmd where it says Ctrl.</p>
+      <p class="read quiet">To copy, press Ctrl + C. To paste, press Ctrl + V. Ctrl is the Control key. On a Mac, press Command instead of Control. The Command key has the sign ⌘.</p>
       <p class="read">These sentence starters can help.</p>
       <ul class="frames read">
         <li>I am a … student at … .</li>
@@ -872,8 +875,8 @@
         <div class="look" data-look="a blue underlined link with the words My GitHub profile."></div>
       </div>
       <ul class="read">
-        <li><code>href</code> says where the link goes.</li>
-        <li>The text between the tags is what the visitor clicks.</li>
+        <li><code>href</code> says where the link goes. Here it goes to <code>https://github.com/robin-vale</code>.</li>
+        <li>The text between the tags is what the visitor clicks. Here it is <b>My GitHub profile</b>.</li>
       </ul>
       <p class="read"><b>Think:</b> what is wrong with each of these links?</p>
 <pre class="code read"><code>&lt;a&gt;https://github.com/robin-vale&lt;/a&gt;
@@ -921,8 +924,15 @@
       <ul class="read">
         <li><code>src</code> says which file to show. <code>images/library.jpg</code> means “the file library.jpg in the folder images”.</li>
         <li><code>alt</code> is for people who cannot see the picture. The browser also shows it when the file does not load.</li>
-        <li>An image has no closing tag.</li>
+        <li>An image has no closing tag. Compare it with a paragraph.</li>
       </ul>
+      <div class="tablewrap read"><table class="tagrow">
+        <thead><tr><th>Element</th><th>The code</th><th>How many tags?</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">A paragraph</th><td><code><span class="hl">&lt;p&gt;</span>I study computer science.<span class="hl">&lt;/p&gt;</span></code></td><td><b>Two.</b> It opens with <code>&lt;p&gt;</code> and it closes with <code>&lt;/p&gt;</code>. The text is between them.</td></tr>
+          <tr><th scope="row">An image</th><td><code><span class="hl">&lt;img</span> src="images/library.jpg" alt="Tall shelves full of books in a library"<span class="hl">&gt;</span></code> <span class="no-tag"><s>&lt;/img&gt;</s> no closing tag</span></td><td><b>One.</b> Everything is inside it: the file and the alt text. Nothing comes after it. There is no <code>&lt;/img&gt;</code>.</td></tr>
+        </tbody>
+      </table></div>
       <p class="read"><b>Think:</b> an employer uses a screen reader. Which alt text helps most?</p>
       <ol class="read" type="a">
         <li><code>alt="image"</code></li>
@@ -1262,9 +1272,9 @@ p {
         <div><dt>selector</dt><dd>Says which elements the rule changes. Example: <code>h1</code> here means every heading 1.<code class="kw-ex">h1 { color: navy; }</code></dd></div>
         <div><dt>property</dt><dd>The thing you change, such as <code>color</code>.</dd></div>
         <div><dt>value</dt><dd>What you change it to, such as <code>navy</code>.</dd></div>
-        <div><dt>curly brackets</dt><dd>The symbols <code>{</code> and <code>}</code>. They go around the lines of a rule. <button type="button" class="say" data-say="curly brackets">Hear it</button><code class="kw-ex">h1 { color: navy; }</code></dd></div>
-        <div><dt>colon</dt><dd>The symbol <code>:</code> between a property and its value. <button type="button" class="say" data-say="colon">Hear it</button><code class="kw-ex">color: navy</code></dd></div>
-        <div><dt>semicolon</dt><dd>The symbol <code>;</code> at the end of each line inside a rule. <button type="button" class="say" data-say="semicolon">Hear it</button><code class="kw-ex">color: navy;</code></dd></div>
+        <div><dt>curly brackets</dt><dd>The symbols <code>{</code> and <code>}</code>. They go around the lines of a rule.<code class="kw-ex">h1 { color: navy; }</code></dd></div>
+        <div><dt>colon</dt><dd>The symbol <code>:</code> between a property and its value.<code class="kw-ex">color: navy</code></dd></div>
+        <div><dt>semicolon</dt><dd>The symbol <code>;</code> at the end of each line inside a rule.<code class="kw-ex">color: navy;</code></dd></div>
       </dl>
     </div>
   </div>
@@ -1396,6 +1406,7 @@ h1 {
         <p>1 padding. 2 border. 3 margin.</p>
         <p>Think of a parcel. The padding is the bubble wrap inside. The border is the cardboard. The margin is the space between parcels on the shelf.</p>
         <p><b>Why do you need this?</b> A web page is boxes beside boxes and boxes under boxes: a heading, a card, a picture, a button. Soon you will arrange them yourself. Padding, border and margin are the three sizes that you change to make them fit. More padding gives the text room. A border shows where a box ends. More margin keeps two boxes apart.</p>
+        <p><b>You do not see them, but you use them.</b> A visitor never sees padding or margin, because they are empty space. A border is a line, and it shows only when you give it a width and a colour. You still use all three all the time, to arrange the sections and elements of a page. You make each one bigger or smaller on its own, and the other two stay as they are. Try it with the three sliders above.</p>
       </details>
     </div>
     <div class="block" data-label="Practise">
@@ -2135,7 +2146,7 @@ a {
           <span class="btnrow" style="margin-top:6px"><button type="button" class="btn small" data-copy-pg="mypage:html">Copy my index.html</button></span></li>
         <li>Make a second file called <code>style.css</code> and paste your styles.
           <span class="btnrow" style="margin-top:6px"><button type="button" class="btn small" data-copy-pg="mypage:css">Copy my style.css</button></span></li>
-        <li>Save both files. Windows: <b class="ui">Ctrl</b> + <b class="ui">S</b>. Mac: <b class="ui">Cmd</b> + <b class="ui">S</b>. A dot on a tab means “not saved yet”.</li>
+        <li>Save both files. Windows: <b class="ui">Ctrl</b> + <b class="ui">S</b>. Mac: <b class="ui">Command</b> + <b class="ui">S</b>. A dot on a tab means “not saved yet”.</li>
       </ol>
       <h3>3. See your page beside your code</h3>
       <ol class="steps read">
@@ -2199,24 +2210,24 @@ a {
       <div class="tablewrap"><table>
         <thead><tr><th>I want</th><th>Do this</th></tr></thead>
         <tbody>
-          <tr><td>Bigger letters</td><td>Hold <b class="ui">Ctrl</b> and press <b class="ui">+</b>. On a Mac hold <b class="ui">Cmd</b>. The minus key makes them smaller.</td></tr>
+          <tr><td>Bigger letters</td><td>Hold <b class="ui">Ctrl</b> and press <b class="ui">+</b>. On a Mac hold <b class="ui">Command</b>. The minus key makes them smaller.</td></tr>
           <tr><td>Long lines that stay on the screen</td><td><b class="ui">View</b>, then <b class="ui">Word Wrap</b>.</td></tr>
           <tr><td>Work that saves itself</td><td><b class="ui">File</b>, then <b class="ui">Auto Save</b>.</td></tr>
           <tr><td>A different look</td><td>Press <b class="ui">F1</b>, type <code>theme</code> and choose <b class="ui">Preferences: Color Theme</b>. Try a light one and a dark one.</td></tr>
           <tr><td>Tidy code</td><td>Right-click in the code, then <b class="ui">Format Document</b>.</td></tr>
-          <tr><td>Any other setting</td><td><b class="ui">Ctrl</b> + <b class="ui">,</b> opens Settings (Mac: <b class="ui">Cmd</b> + <b class="ui">,</b>). Type what you are looking for, such as <code>font size</code>.</td></tr>
+          <tr><td>Any other setting</td><td><b class="ui">Ctrl</b> + <b class="ui">,</b> opens Settings (Mac: <b class="ui">Command</b> + <b class="ui">,</b>). Type what you are looking for, such as <code>font size</code>.</td></tr>
         </tbody>
       </table></div>
       <h3>Six shortcuts that are worth learning</h3>
       <div class="tablewrap"><table>
         <thead><tr><th>Job</th><th>Windows</th><th>Mac</th></tr></thead>
         <tbody>
-          <tr><td>Save</td><td>Ctrl + S</td><td>Cmd + S</td></tr>
-          <tr><td>Undo</td><td>Ctrl + Z</td><td>Cmd + Z</td></tr>
-          <tr><td>Find a word in this file</td><td>Ctrl + F</td><td>Cmd + F</td></tr>
+          <tr><td>Save</td><td>Ctrl + S</td><td>Command + S</td></tr>
+          <tr><td>Undo</td><td>Ctrl + Z</td><td>Command + Z</td></tr>
+          <tr><td>Find a word in this file</td><td>Ctrl + F</td><td>Command + F</td></tr>
           <tr><td>Open the Command Palette</td><td>F1</td><td>F1</td></tr>
-          <tr><td>Turn a line into a comment, and back</td><td>Ctrl + /</td><td>Cmd + /</td></tr>
-          <tr><td>Hide or show the Explorer</td><td>Ctrl + B</td><td>Cmd + B</td></tr>
+          <tr><td>Turn a line into a comment, and back</td><td>Ctrl + /</td><td>Command + /</td></tr>
+          <tr><td>Hide or show the Explorer</td><td>Ctrl + B</td><td>Command + B</td></tr>
         </tbody>
       </table></div>
     </div>
@@ -2285,7 +2296,7 @@ a {
     <div class="block" data-label="For real">
       <h3>Where the switch is</h3>
       <ol class="steps read">
-        <li>Open Settings: <b class="ui">Ctrl</b> + <b class="ui">,</b> on Windows, <b class="ui">Cmd</b> + <b class="ui">,</b> on a Mac.</li>
+        <li>Open Settings: <b class="ui">Ctrl</b> + <b class="ui">,</b> on Windows, <b class="ui">Command</b> + <b class="ui">,</b> on a Mac.</li>
         <li>In the search box at the top, type <code>disable ai</code>.</li>
         <li>Tick the setting that it finds. Its name is <code>chat.disableAIFeatures</code>, and its label reads <b class="ui">Chat: Disable AI Features</b> or something close to that. The chat and the grey suggestions disappear.</li>
         <li>To bring them back, untick the box.</li>
@@ -5944,7 +5955,7 @@ docs/read-me.txt</code></pre>
       <ol class="steps read">
         <li>Read the first two sentences. Stop.</li>
         <li>Look at the list of sections at the side of the page. Jump to the one you need.</li>
-        <li>Press <b class="ui">Ctrl</b> + <b class="ui">F</b> (Mac: <b class="ui">Cmd</b> + <b class="ui">F</b>) and type the word that you are looking for.</li>
+        <li>Press <b class="ui">Ctrl</b> + <b class="ui">F</b> (Mac: <b class="ui">Command</b> + <b class="ui">F</b>) and type the word that you are looking for.</li>
       </ol>
       <h3>Words that documentation loves</h3>
       <dl class="keywords">
@@ -7284,12 +7295,12 @@ a:hover { color: red; }        <span class="cm">/* a link with the mouse over it
           <thead><tr><th>Job</th><th>Windows</th><th>Mac</th></tr></thead>
           <tbody>
             <tr><td>Open a repository in the browser editor</td><td colspan="2">Press the full stop key on its page on GitHub</td></tr>
-            <tr><td>Save</td><td>Ctrl + S</td><td>Cmd + S</td></tr>
-            <tr><td>Undo</td><td>Ctrl + Z</td><td>Cmd + Z</td></tr>
-            <tr><td>Find in this file</td><td>Ctrl + F</td><td>Cmd + F</td></tr>
+            <tr><td>Save</td><td>Ctrl + S</td><td>Command + S</td></tr>
+            <tr><td>Undo</td><td>Ctrl + Z</td><td>Command + Z</td></tr>
+            <tr><td>Find in this file</td><td>Ctrl + F</td><td>Command + F</td></tr>
             <tr><td>Command Palette</td><td>F1</td><td>F1</td></tr>
-            <tr><td>Comment a line</td><td>Ctrl + /</td><td>Cmd + /</td></tr>
-            <tr><td>Settings</td><td>Ctrl + ,</td><td>Cmd + ,</td></tr>
+            <tr><td>Comment a line</td><td>Ctrl + /</td><td>Command + /</td></tr>
+            <tr><td>Settings</td><td>Ctrl + ,</td><td>Command + ,</td></tr>
             <tr><td>The skeleton of a page</td><td colspan="2">In an empty .html file, type <code>!</code> and press Tab</td></tr>
           </tbody>
         </table></div>
@@ -7361,7 +7372,7 @@ a:hover { color: red; }        <span class="cm">/* a link with the mouse over it
       <ol>
         <li>Did you commit? In the browser version of VS Code: did you click <b class="ui">Commit &amp; Push</b>?</li>
         <li>Is the change on <code>main</code>? In the team repository a change is live only after the merge.</li>
-        <li>Wait a minute. Then refresh the page properly: <b class="ui">Ctrl</b> + <b class="ui">F5</b> on Windows, <b class="ui">Cmd</b> + <b class="ui">Shift</b> + <b class="ui">R</b> on a Mac.</li>
+        <li>Wait a minute. Then refresh the page properly: <b class="ui">Ctrl</b> + <b class="ui">F5</b> on Windows, <b class="ui">Command</b> + <b class="ui">Shift</b> + <b class="ui">R</b> on a Mac.</li>
         <li>Look at the tab <b class="ui">Actions</b> in your repository. A green tick means that GitHub has finished publishing.</li>
       </ol>
     </details>
@@ -7559,7 +7570,7 @@ The address of my page or my repository:</code></pre>
       <label><input type="radio" name="set-motion" value="normal"><span>Normal<small>The moving sketches play by themselves.</small></span></label>
       <label><input type="radio" name="set-motion" value="less"><span>Less motion<small>The sketches wait until you press Play, and nothing pulses.</small></span></label>
     </fieldset>
-    <p class="read quiet">Your browser can also make any website bigger: hold Ctrl, or Cmd on a Mac, and press the plus key.</p>
+    <p class="read quiet">Your browser can also make any website bigger: hold Ctrl, or Command on a Mac, and press the plus key.</p>
   </div>
 </section>
 

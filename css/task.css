@@ -104,6 +104,23 @@ table.gridnotes textarea{min-height:76px;font:inherit;font-size:15px;width:100%;
 .cards3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:0 0 1em}
 .cards3.by3{grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr))}   /* six cards: three in a row on a wide screen */
 .site{--behind:var(--card);background:var(--card);border-top:2px solid var(--track);padding:14px 18px 16px}
+/* a link that must not be missed: a red frame, and a red arrow drawn in front of the words. Use it as  <a class="arrow-link" href="…">  */
+.arrow-link{display:inline-flex;align-items:center;gap:14px;max-width:100%;padding:10px 18px 10px 14px;border:3px solid var(--mark);color:var(--ink);font-weight:700;text-decoration-thickness:2px;text-underline-offset:4px;overflow-wrap:anywhere}
+.arrow-link::before{content:"";flex:none;width:34px;height:22px;background:var(--mark);clip-path:polygon(0 33%,56% 33%,56% 0,100% 50%,56% 100%,56% 67%,0 67%)}
+.arrow-link:hover{color:var(--ink);background:color-mix(in srgb,var(--mark) 18%,transparent)}
+/* a note in red pen, with an arrow that points left at the thing before it. Use it as  <span class="pen-note">words</span>  */
+.pen-note{display:inline-flex;align-items:center;gap:8px;margin-left:10px;vertical-align:middle;font:700 13px/1.3 var(--f-body);letter-spacing:0;text-transform:none;color:var(--mark)}
+.pen-note::before{content:"";flex:none;width:26px;height:16px;background:currentColor;clip-path:polygon(100% 33%,44% 33%,44% 0,0 50%,44% 100%,44% 67%,100% 67%)}
+/* the same note with an arrow that points up. Under the tab of the small browser it says which thing is the title. */
+.pen-note.up::before{width:16px;height:22px;clip-path:polygon(33% 100%,33% 44%,0 44%,50% 0,100% 44%,67% 44%,67% 100%)}
+.look-tab{position:relative}
+.look-tab .pen-note{position:absolute;left:10px;top:calc(100% + 4px);margin:0;white-space:nowrap;color:#c4161c;z-index:1}
+.look-page.has-tabnote{padding-top:16px}
+table.tagrow code .hl{color:var(--amber);font-weight:700}
+table.tagrow th[scope="row"]{white-space:nowrap}
+/* a tag that must not be written: crossed out, in red pen */
+.no-tag{display:inline-block;margin-top:6px;color:var(--mark);font-weight:700;white-space:nowrap}
+.no-tag s{font-family:var(--f-code);text-decoration-thickness:2px;margin-right:4px}
 .site h3{margin:0 0 4px;font-size:18px}
 .site p{font-size:16px;margin:0 0 .6em}
 .site ul{font-size:16px;margin:0}

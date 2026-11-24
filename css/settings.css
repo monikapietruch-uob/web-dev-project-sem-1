@@ -22,7 +22,7 @@ html[data-theme="light"]{
   --cyan:#00796f; --amber:#9a5700; --purple:#5a3fc0; --green:#2c7a1a; --blue:#1b5fc0; --red:#bd3718; --yours:#33415f;
   --go:#ffb020; --on-go:#0b1020;
   --ok:#00796f; --ok-bg:rgba(0,121,111,.12); --warn:#8a4f00; --warn-bg:rgba(255,176,32,.22); --bad:#b3261e; --bad-bg:rgba(179,38,30,.1);
-  --alert:#c4161c; --alert-bg:#fde7e7; --alert-ink:#7a0b10;
+  --alert:#c4161c; --alert-bg:#fde7e7; --alert-ink:#7a0b10; --mark:#c4161c;
   --code-bg:#ffffff; --code-ink:#0b2540;
 }
 html[data-theme="light"] .sky{background-image:none}
