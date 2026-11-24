@@ -1,0 +1,46 @@
+/* =====================================================================
+   css/playground.css
+   The playground: the code editor with the result beside it.
+   ===================================================================== */
+/* ---------- playground (code on the left, result on the right) ---------- */
+.pg{--behind:var(--card);border:1px solid var(--track);background:var(--card);margin:0 0 1em}
+.pg-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:340px}
+@media (max-width:860px){.pg-grid{grid-template-columns:minmax(0,1fr)}}
+.pg-edit{display:flex;flex-direction:column;min-width:0;background:var(--code-bg)}
+.pg-tabs{display:flex;gap:2px;background:var(--card);padding:8px 8px 0;flex-wrap:wrap}
+.pg-tab{font:700 14px var(--f-code);color:var(--dim);background:transparent;border:0;border-top:2px solid transparent;padding:8px 12px;cursor:pointer}
+.pg-tab[aria-selected="true"]{background:var(--code-bg);color:var(--ink);border-top-color:var(--alt)}
+.pg-pane{display:grid;grid-template-columns:auto minmax(0,1fr);flex:1;min-height:290px}
+.pg-gutter{margin:0;padding:14px 8px 12px 12px;color:var(--alt);opacity:.9;text-align:right;font-size:16px;line-height:1.5;overflow:hidden;user-select:none}
+.pg-area{border:0;outline-offset:-3px;resize:none;background:var(--code-bg);color:var(--code-ink);font:16px/1.5 var(--f-code);padding:14px 12px 12px 6px;white-space:pre;overflow:auto;tab-size:2;width:100%;min-height:290px}
+.pg-hint{margin:0;display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--alert-bg);color:var(--alert-ink);font-size:16px;line-height:1.35;font-weight:700;border-top:3px solid var(--alert)}
+.pg-hint:empty{display:none}
+.pg-bang{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--alert);color:#fff;font:800 28px/1 var(--f-display)}
+.pg-nums{display:block}
+.pg-gutter .is-bad{background:var(--alert);color:#fff;font-weight:700;box-shadow:0 0 0 3px var(--alert);border-radius:1px}
+.pg-flag{margin-left:10px;padding:2px 8px;background:var(--alert);color:#fff;font-weight:700}
+.pg.has-problem .pg-outbar{box-shadow:inset 0 -3px 0 var(--alert)}
+.pg-goals li.is-held .goal-mark{background:var(--alert-bg);color:var(--alert-ink);border-color:var(--alert);font-weight:700}
+.pg-out{display:flex;flex-direction:column;min-width:0;border-left:1px solid var(--track)}
+@media (max-width:860px){.pg-out{border-left:0;border-top:1px solid var(--track)}}
+.pg-outbar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 10px;align-items:center;padding:9px 14px;background:var(--card-2);color:var(--ink-2);font-size:13px}
+.pg-outbar small{font-size:13px;color:var(--dim)}
+.pg-frame{flex:1;min-height:270px;background:#fff;display:flex}
+.pg-frame iframe{border:0;width:100%;flex:1;background:#fff;color-scheme:light}
+.pg-shadow{width:100%;overflow:auto;background:#fff;color:#000}
+.pg-console{margin:0;padding:7px 14px;font:14px var(--f-code);background:#2a0f16;color:#ffb3b3}
+.pg-under{border-top:1px solid var(--track);padding:16px 20px 18px;display:grid;gap:10px}
+.pg-under h4{margin:0;font:700 14px var(--f-display);letter-spacing:.2em;text-transform:uppercase;color:var(--alt)}
+.pg-goals{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pg-goals li{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;align-items:baseline;margin:0;overflow-wrap:anywhere}
+.goal-mark{font-size:12px;text-align:center;padding:3px 0;color:var(--dim);border:1px solid var(--line-2)}
+.pg-goals li.is-done .goal-mark{background:var(--ok-bg);color:var(--ok);border-color:var(--ok)}
+.pg-score{margin:0;font-weight:700;color:var(--ink)}
+.pg.is-complete .pg-score{color:var(--ok)}
+.pg-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.pg-switch{font-size:14px;color:var(--dim);background:none;border:0;text-decoration:underline;cursor:pointer;padding:0;font-family:inherit}
+.pg-tip{border-left:4px solid var(--alt);background:var(--card);padding:12px 16px;font-size:16px}
+.pg-tip p{margin:0 0 6px} .pg-tip ol{margin:0} .pg-tip li:last-child{margin-bottom:0}
+.pg-answer{display:grid;gap:8px}
+.pg-answer h5{margin:0;font-size:15px;color:var(--ink)}
+.pg-answer pre.code{margin:0}

@@ -1,0 +1,27 @@
+/* =====================================================================
+   css/print.css
+   How pages look on paper: black on white, only the page that is open.
+   ===================================================================== */
+/* ---------- print ---------- (cheat sheets, the record: black on white, only the page that is open) */
+@page{margin:14mm}
+@media print{
+  html:root{--paper:#fff;--card:#fff;--card-2:#eee;--ink:#000;--ink-2:#111;--dim:#444;--line:#999;--line-2:#666;
+    --cyan:#000;--amber:#000;--purple:#000;--green:#000;--blue:#000;--red:#000;--yours:#000;--code-bg:#fff;--code-ink:#000;--ok:#000;--warn:#000;--bad:#000;color-scheme:light}
+  body{background:#fff;color:#000;font-size:12pt;zoom:1 !important}
+  .sky,.topbar,.status,.footer,.task-foot,.btnrow,.no-print,.demo,.pg,.backlink{display:none !important}
+  .wrap{padding:0;max-width:none}
+  .plainhead{padding:0 0 6px}
+  .plainhead h1{font-size:22pt}
+  a{text-decoration:none;color:#000}
+  table{font-size:10pt}
+  th,td{padding:3px 6px}
+  .sheet{break-after:page}
+  .sheet:last-child{break-after:auto}
+  .sheet-grid{display:block}
+  .patch-wall{grid-template-columns:repeat(6,1fr)}
+  .patch-edge,.patch-in,.patch-ring{stroke:#000 !important;fill:none !important}
+  .patch-tag,.patch-sub{fill:#000 !important}
+  .patch:not(.is-earned){opacity:.35}
+  h2,h3{break-after:avoid}
+  tr,li{break-inside:avoid}
+}

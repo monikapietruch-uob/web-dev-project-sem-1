@@ -1,0 +1,15 @@
+/* =====================================================================
+   css/quiz.css
+   Quiz questions.
+   ===================================================================== */
+/* ---------- quiz ---------- */
+.q{--behind:var(--card);border:1px solid var(--line);padding:14px 18px 16px;margin:0 0 14px;background:var(--card);min-width:0}
+.q legend{font-weight:700;padding:0 8px;color:var(--ink)}
+.q.ask legend{float:left;width:100%;padding:0;margin:0 0 12px;font-size:19px;line-height:1.35}   /* a question as the heading: it sits inside the box */
+.q.ask .q-opts{clear:both}
+.q-opts{display:grid;gap:8px}
+.q-opts button{font:inherit;text-align:left;padding:9px 14px;border:1px solid var(--line-2);background:var(--paper);cursor:pointer;color:var(--ink-2)}
+.q-opts button:hover{border-color:var(--track);color:var(--ink)}
+.q-opts button.is-right{border-color:var(--ok);background:var(--ok-bg);color:var(--ink);font-weight:700}
+.q-opts button.is-wrong{border-color:var(--bad);background:var(--bad-bg);text-decoration:line-through}
+.q-why{margin:10px 0 0;font-weight:700;color:var(--ink)}

@@ -1,0 +1,99 @@
+/* =====================================================================
+   css/toolbox.css
+   The Toolbox pages: word practice, the symbol gym, cheat sheets, the
+   Stuck? page, checkpoints with their mission patches, My record.
+   ===================================================================== */
+/* ---------- toolbox ---------- (the Toolbox page, cheat sheets, the Stuck? page) */
+.toolgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:0 0 40px;padding:0;list-style:none}
+.toolgrid li{margin:0}
+.tool{display:block;height:100%;text-decoration:none;--behind:var(--card);background:var(--card);border:1px solid var(--line);border-top:2px solid var(--tool,var(--cyan));padding:16px 18px;color:var(--ink-2)}
+.tool:hover{border-color:var(--tool,var(--cyan));color:var(--ink-2)}
+.tool b{display:block;font:700 19px/1.2 var(--f-display);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:4px}
+.tool span{font-size:16px}
+.t2{--tool:var(--amber)} .t3{--tool:var(--purple)} .t4{--tool:var(--green)} .t5{--tool:var(--blue)} .t6{--tool:var(--red)}
+.backlink{font:14px var(--f-code);letter-spacing:.1em;text-transform:uppercase;margin:0 0 6px}
+.backlink a{text-decoration:none;color:var(--alt)}
+details.fix{--behind:var(--card);background:var(--card);border:1px solid var(--line);border-left:4px solid var(--warn);padding:12px 16px;margin:0 0 10px;max-width:76ch}
+details.fix summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:19px}
+details.fix[open] summary{margin-bottom:8px}
+details.fix > :last-child{margin-bottom:0}
+.sheet{margin:0 0 34px}
+.sheet h2{margin-top:0}
+.sheet table{font-size:15px}
+.sheet td:first-child{white-space:nowrap}
+.sheet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:0 26px}
+
+/* ---------- word games ---------- (flashcards, matching, the symbol gym) */
+.card-face{--behind:var(--card);background:var(--card);border:1px solid var(--track);padding:22px 24px;min-height:190px;margin:0 0 14px;max-width:640px}
+.card-face .label{font-size:12.5px;color:var(--alt);margin:0 0 10px}
+.card-word{font:700 34px/1.15 var(--f-display);letter-spacing:.04em;color:var(--ink);margin:0 0 12px}
+.card-meaning{font-size:21px;color:var(--ink);margin:0 0 8px}
+.match{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:14px;margin:0 0 12px;max-width:900px}
+.match-col{display:grid;gap:8px;align-content:start}
+.match-item{font:inherit;text-align:left;padding:10px 14px;border:1px solid var(--line-2);background:var(--card);color:var(--ink-2);cursor:pointer;min-height:48px}
+.match-item:hover{border-color:var(--track)}
+.match-item.is-picked{border-color:var(--amber);box-shadow:inset 4px 0 0 var(--amber);color:var(--ink)}
+.match-item.is-right{border-color:var(--ok);background:var(--ok-bg);color:var(--ink);cursor:default}
+@media (max-width:620px){.match{grid-template-columns:minmax(0,1fr)}}
+.gym-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0 20px;max-width:760px}
+.gym-box{--behind:var(--card);background:var(--card);border:1px solid var(--track);padding:20px 24px;margin:0 0 20px;max-width:760px}
+.gym-target{font:700 44px/1.2 var(--f-code);color:var(--ink);margin:0 0 6px;min-height:54px;overflow-wrap:anywhere}
+.gym-help{color:var(--ink-2);min-height:1.5em}
+.gym-in{font-family:var(--f-code) !important;font-size:20px !important}
+.gym-in.is-wrong{border-color:var(--bad) !important}
+.gym-status{font:15px var(--f-code);color:var(--ink);min-height:1.5em}
+.gym-keys td:first-child{text-align:center}
+.gym-keys code{font-size:20px}
+
+/* ---------- checkpoints ---------- (the quiz at the end of a stage, and the mission patches) */
+.station.cp .st-n{border-style:dashed;color:var(--stage)}
+.station.cp.is-done .st-n{border-style:solid;color:#07101f}
+.station.cp .st-title{color:var(--ink-2)}
+.stage-name .patch{width:84px;height:84px;margin-top:14px;display:block}
+.patch{--pc:var(--stage,var(--track));width:96px;height:96px}
+.patch.p-solo{--pc:var(--solo)} .patch.p-team{--pc:var(--team)} .patch.p-yours{--pc:var(--yours)} .patch.p-notes{--pc:var(--notes)}
+.patch.p-next{--pc:var(--next)} .patch.p-lang{--pc:var(--lang)} .patch.p-path{--pc:var(--path)}
+.patch-edge{fill:none;stroke:var(--line-2);stroke-width:2.5;stroke-dasharray:5 4}
+.patch-in{fill:none;stroke:var(--line);stroke-width:1.5}
+.patch-ring{fill:none;stroke:var(--line-2);stroke-width:3}
+.patch-dot{fill:var(--line-2)}
+.patch-tag{font:700 17px var(--f-display);letter-spacing:.06em;text-anchor:middle;fill:var(--dim)}
+.patch-sub{font:7.5px var(--f-code);letter-spacing:.14em;text-anchor:middle;fill:var(--dim)}
+.patch.is-earned .patch-edge{stroke:var(--pc);stroke-dasharray:none;fill:color-mix(in srgb,var(--pc) 16%,var(--paper))}
+.patch.is-earned .patch-in{stroke:var(--pc)}
+.patch.is-earned .patch-ring{stroke:var(--pc)}
+.patch.is-earned .patch-dot{fill:var(--amber)}
+.patch.is-earned .patch-tag{fill:var(--ink)}
+.patch.is-earned .patch-sub{fill:var(--pc)}
+@media (max-width:760px){.stage-name .patch{width:64px;height:64px;margin-top:8px}}
+.cp-form{max-width:76ch;margin-top:8px}
+.cp-opts{display:grid;gap:8px;clear:both}
+.cp-opt{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;align-items:start;padding:9px 14px;border:1px solid var(--line-2);background:var(--paper);cursor:pointer;color:var(--ink-2)}
+.cp-opt:hover{border-color:var(--track)}
+.cp-opt input{width:20px;height:20px;margin:3px 0 0;accent-color:var(--cyan)}
+.cp-opt.is-right{border-color:var(--ok);background:var(--ok-bg);color:var(--ink);font-weight:700}
+.cp-opt.is-wrong{border-color:var(--bad);background:var(--bad-bg);text-decoration:line-through}
+.cp-intro{margin-top:18px}
+.cp-result{margin-top:16px}
+.cp-score{font:700 26px/1.2 var(--f-display);letter-spacing:.06em;color:var(--ink);margin:0 0 12px}
+.cp-patch{display:flex;gap:18px;align-items:center;margin:0 0 16px}
+.cp-patch .patch{width:120px;height:120px;flex:none}
+.cp-patch p{margin:0;max-width:40ch}
+
+/* ---------- my record ---------- (progress, patches, saving to a file) */
+.record-line{font-size:19px;color:var(--ink-2);margin:18px 0 14px}
+.record-list{list-style:none;padding:0;margin:0 0 1em;max-width:76ch}
+.record-list li{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line);padding:5px 0;margin:0}
+.patch-wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:14px 10px;margin:0 0 1em}
+.patch-cell{display:grid;justify-items:center;gap:4px;text-decoration:none;font-size:14px;text-align:center;color:var(--ink-2)}
+.patch-cell .patch{width:88px;height:88px}
+.savegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:18px;margin:0 0 1em}
+.savebox{--behind:var(--card);background:var(--card);border:1px solid var(--line);padding:16px 20px;min-width:0}
+.savebox h3{font:700 19px/1.2 var(--f-display);letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px}
+.savebox input[type="file"]{font:inherit;display:block;width:100%;max-width:100%;min-width:0;color:var(--ink-2)}
+.savebox .field{min-width:0}
+.choices{border:1px solid var(--line);background:var(--card);padding:14px 18px 6px;margin:0 0 16px;max-width:66ch;min-width:0}
+.choices legend{font:700 17px/1.2 var(--f-display);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);padding:0 8px}
+.choices label{display:grid;grid-template-columns:26px minmax(0,1fr);gap:8px;padding:5px 0;cursor:pointer;color:var(--ink)}
+.choices input{width:20px;height:20px;margin:4px 0 0;accent-color:var(--cyan)}
+.choices small{display:block;color:var(--dim);font-size:15px}

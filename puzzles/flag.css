@@ -1,0 +1,110 @@
+/* =====================================================================
+   The style sheet of the practice puzzle "Find the flag".
+   You opened it. Good. Style sheets are sent to every visitor,
+   so anybody can read them, comments and all.
+   ===================================================================== */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f3f5f2;
+  color: #1b2a41;
+  font-family: Verdana, Geneva, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+a { color: #0f4c3a; font-weight: bold; }
+a:focus-visible, button:focus-visible { outline: 3px solid #d1495b; outline-offset: 3px; }
+
+/* the strip at the very top */
+.practice {
+  margin: 0;
+  padding: 8px 20px;
+  background: #1b2a41;
+  color: #ffffff;
+  font-size: 15px;
+}
+.practice a { color: #ffd23f; }
+
+/* the green band with the name of the office */
+.top {
+  background: #0f4c3a;
+  color: #ffffff;
+  padding: 28px 20px 30px;
+  border-bottom: 10px solid #ffd23f;
+}
+.top > * { max-width: 900px; margin-left: auto; margin-right: auto; }
+.uni { margin-top: 0; margin-bottom: 4px; font-size: 16px; letter-spacing: 0.04em; }
+h1 { margin-top: 0; margin-bottom: 8px; font-family: Georgia, "Times New Roman", serif; font-size: 46px; line-height: 1.1; }
+.motto { margin-top: 0; margin-bottom: 0; font-size: 18px; color: #d7efe6; }
+
+main { max-width: 940px; margin: 0 auto; padding: 8px 20px 30px; }
+section { margin-top: 30px; }
+
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  margin: 0 0 10px;
+  color: #0f4c3a;
+}
+
+/* The Dean asked for "a more exciting grey". This is the most exciting
+   grey that the committee could agree on. It took three meetings.
+   flag{styles-have-comments-too} */
+table { width: 100%; border-collapse: collapse; background: #ffffff; border: 2px solid #8a94a3; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #c9d0d8; vertical-align: top; }
+th { background: #1b2a41; color: #ffffff; font-size: 15px; }
+tbody tr:nth-child(even) { background: #eef1f4; }
+td:first-child { font-family: "Courier New", Courier, monospace; white-space: nowrap; }
+
+.notice {
+  background: #ffd23f;
+  border-left: 10px solid #d1495b;
+  padding: 14px 18px;
+}
+.notice h2 { color: #1b2a41; margin-bottom: 4px; }
+.notice p { margin: 0; }
+
+.two { display: grid; grid-template-columns: 1fr 260px; gap: 30px; align-items: start; }
+.two h2 + ul, .two h2 + p { margin-top: 0; }
+.two ul { padding-left: 22px; }
+.two div > h2:not(:first-child) { margin-top: 24px; }
+
+.flagbox { background: #ffffff; border: 2px solid #8a94a3; padding: 16px 16px 10px; text-align: center; }
+.flagbox svg { max-width: 100%; height: auto; }
+.caption { margin: 6px 0 0; font-size: 15px; color: #45556b; }
+
+button {
+  font: inherit;
+  font-weight: bold;
+  background: #d1495b;
+  color: #ffffff;
+  border: 0;
+  border-bottom: 4px solid #8f2433;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+button:hover { background: #b93a4c; }
+button:active { border-bottom-width: 2px; transform: translateY(2px); }
+#bell-says { min-height: 1.6em; margin: 8px 0 0; font-weight: bold; color: #0f4c3a; }
+
+ol { padding-left: 24px; }
+li { margin-bottom: 4px; }
+
+footer {
+  background: #1b2a41;
+  color: #ffffff;
+  padding: 18px 20px 22px;
+}
+footer p { max-width: 900px; margin: 0 auto 6px; }
+footer a { color: #ffd23f; }
+.small { font-size: 15px; }
+
+/* on a narrow screen the two columns become one, and the table can scroll sideways */
+@media (max-width: 700px) {
+  h1 { font-size: 34px; }
+  .two { grid-template-columns: 1fr; }
+  section { overflow-x: auto; }
+}

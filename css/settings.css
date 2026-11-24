@@ -1,0 +1,36 @@
+/* =====================================================================
+   css/settings.css
+   Display settings: bigger text, the light theme, less motion.
+   The light theme changes the colour variables of base.css. Load it after the others.
+   ===================================================================== */
+/* ---------- display settings ---------- (bigger text, the light theme, less motion) */
+html[data-size="large"] body{zoom:1.12}
+html[data-size="larger"] body{zoom:1.25}
+/* On a phone, bigger text leaves little room. The very large titles step down, and a long word may break. */
+h1{overflow-wrap:break-word}
+@media (max-width:600px){
+  html[data-size="large"] .task-head h1,html[data-size="large"] .plainhead h1,html[data-size="large"] .trackhead h1{font-size:32px;letter-spacing:.06em}
+  html[data-size="larger"] .task-head h1,html[data-size="larger"] .plainhead h1,html[data-size="larger"] .trackhead h1{font-size:27px;letter-spacing:.05em}
+  html[data-size="larger"] .hero h1{font-size:28px}
+}
+html[data-motion="less"] .is-hot{animation:none}
+html[data-motion="less"] .mk-cursor{transition:none}
+/* The light theme: the same variables as in base.css, with new values. Track colours are darker, so they can be read on white. */
+html[data-theme="light"]{
+  color-scheme:light;
+  --paper:#f3f5fa; --card:#ffffff; --card-2:#e4e9f4; --ink:#0f1a33; --ink-2:#27324d; --dim:#56617d; --line:#d0d7e6; --line-2:#8f9bb8;
+  --cyan:#00796f; --amber:#9a5700; --purple:#5a3fc0; --green:#2c7a1a; --blue:#1b5fc0; --red:#bd3718; --yours:#33415f;
+  --go:#ffb020; --on-go:#0b1020;
+  --ok:#00796f; --ok-bg:rgba(0,121,111,.12); --warn:#8a4f00; --warn-bg:rgba(255,176,32,.22); --bad:#b3261e; --bad-bg:rgba(179,38,30,.1);
+  --alert:#c4161c; --alert-bg:#fde7e7; --alert-ink:#7a0b10;
+  --code-bg:#ffffff; --code-ink:#0b2540;
+}
+html[data-theme="light"] .sky{background-image:none}
+html[data-theme="light"] .sky i{background:radial-gradient(circle at 34% 28%,#e6ebf7,#d5ddef 62%);box-shadow:0 0 0 1px var(--line)}
+html[data-theme="light"] .chip.new{background:#ffb020;border-color:#ffb020}
+html[data-theme="light"] .station.is-done .st-n,html[data-theme="light"] .station.cp.is-done .st-n{color:#fff}
+html[data-theme="light"] .btn-done[aria-pressed="true"]{color:#fff}
+html[data-theme="light"] .brand i{box-shadow:inset 0 0 0 5px var(--paper),inset 0 0 0 13px #ffb020}
+html[data-theme="light"] pre.code,html[data-theme="light"] .filetree{background:#f8f9fc}
+html[data-theme="light"] .patch.is-earned .patch-dot{fill:#ffb020}
+html[data-theme="light"] :focus-visible{outline-color:#b85f00}

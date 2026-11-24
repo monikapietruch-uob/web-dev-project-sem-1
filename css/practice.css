@@ -1,0 +1,138 @@
+/* =====================================================================
+   css/practice.css
+   Practice tools inside tasks: hear-it buttons, the word counter, the
+   timer, spot-it lists, the message checker, the pretend terminal,
+   the drawn letters, emails and datasheet.
+   ===================================================================== */
+/* ---------- practice tools ---------- (inside tasks) */
+.chip.tag{border-style:dashed;color:var(--ink-2);border-color:var(--line-2)}
+.stuck-link{flex-basis:100%;margin:0;font-size:15px;color:var(--dim)}
+/* hear it */
+.say{font:700 13px/1 var(--f-display);letter-spacing:.1em;text-transform:uppercase;color:var(--track);background:none;border:1px solid var(--track);padding:6px 10px 6px 8px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;vertical-align:middle}
+.say::before{content:"";border:6px solid transparent;border-left:9px solid currentColor;border-right:0}
+.say:hover{background:color-mix(in srgb,var(--track) 20%,transparent)}
+.say.mini{padding:5px 6px 5px 8px;border-radius:50%;width:24px;height:24px;justify-content:center;gap:0}
+.say.mini::before{border-width:5px;border-left-width:8px}
+.say-note{display:block;font-size:15px;color:var(--warn);margin-top:4px}
+table .say{margin-left:4px}
+/* a box that counts words */
+.wordcount{margin:-8px 0 14px;font:14px var(--f-code);color:var(--dim)}
+.wordcount.is-ok{color:var(--ok);font-weight:700}
+/* the stopwatch */
+.timer{--behind:var(--card);background:var(--card);border:1px solid var(--track);padding:16px 20px;margin:0 0 1em;max-width:520px}
+.timer-face{font:700 64px/1 var(--f-code);color:var(--ink);margin:0 0 6px;letter-spacing:.04em}
+.timer[data-zone="good"] .timer-face{color:var(--ok)}
+.timer[data-zone="long"] .timer-face{color:var(--bad)}
+.timer-say{font-weight:700;color:var(--ink);margin:0 0 12px}
+.timer-log{margin:0;font:15px var(--f-code);color:var(--ink-2)}
+.timer .quiet{margin:14px 0 4px}
+/* spot it: a list of things to click */
+.spot{--behind:var(--card);background:var(--card);border:1px solid var(--track);padding:14px 16px;margin:0 0 1em;display:grid;gap:4px}
+.spot-item{font:inherit;text-align:left;background:var(--paper);color:var(--ink-2);border:1px solid var(--line);padding:7px 12px;cursor:pointer;width:100%}
+.spot.code .spot-item{font:15px/1.45 var(--f-code);white-space:pre-wrap;overflow-wrap:anywhere;background:var(--code-bg);color:var(--code-ink)}
+.spot-item:hover{border-color:var(--track)}
+.spot-item.is-found{border-color:var(--bad);background:var(--bad-bg);color:var(--ink)}
+.spot-item.is-fine{border-color:var(--ok);opacity:.8}
+.spot-note{display:block;font-size:15px;font-weight:700;color:var(--ink);padding:2px 12px 8px}
+.spot-item.is-fine + .spot-note{font-weight:400;color:var(--dim)}
+.spot-score{margin:8px 0 0;font-weight:700;color:var(--ink)}
+.spot.is-complete .spot-score{color:var(--ok)}
+/* a list where the things to find are good things (main ideas, for example) */
+.spot.good .spot-item.is-found{border-color:var(--ok);background:var(--ok-bg);color:var(--ink)}
+.spot.good .spot-item.is-fine{border-color:var(--line);opacity:.75}
+/* the commit message checker and the flags */
+.msg-out{list-style:none;margin:2px 0 0;padding:0;font-size:15px;color:var(--warn)}
+.msg-out li{margin:0;padding-left:18px;position:relative}
+.msg-out li::before{content:"";position:absolute;left:2px;top:.55em;width:8px;height:8px;background:currentColor;border-radius:50%}
+.msg-out li.is-ok{color:var(--ok);font-weight:700}
+.flag-out{font-size:15px;color:var(--warn)}
+.flag-out.is-ok{color:var(--ok);font-weight:700}
+.flag-count{font:700 16px var(--f-code);color:var(--ink)}
+/* the list of reflections */
+.refl label{grid-template-columns:28px minmax(0,1fr)}
+.refl-text{display:block;color:var(--ink);margin-top:2px;white-space:pre-wrap}
+/* things drawn like paper: a CV, a job advert, an email, a datasheet. They stay light, like real paper. */
+.paper{background:#fbfcfe;color:var(--s-ink);border:1px solid var(--s-line);border-radius:4px;padding:18px 22px;margin:0 0 1em;max-width:720px;font-size:16px;line-height:1.45;color-scheme:light}
+.paper b,.paper strong,.paper th,.paper h3,.paper h4{color:var(--s-ink)}
+.paper h3{font:700 22px/1.2 var(--f-body);letter-spacing:0;margin:0 0 2px}
+.paper h4{font:700 13px/1.2 var(--f-display);letter-spacing:.14em;text-transform:uppercase;margin:14px 0 4px;border-bottom:1px solid var(--s-line);padding-bottom:3px}
+.paper p{margin:0 0 .5em}
+.paper ul{margin:0 0 .5em}
+.paper a{color:#1857c9}
+.paper .fine{font-size:14px;color:var(--s-ink-2)}
+.paper table{background:#fff;font-size:15px;color:var(--s-ink)}
+.paper th,.paper td{border-color:var(--s-line)}
+.paper th{background:#eceef5}
+.paper code{background:#eceef5;color:var(--s-ink)}
+/* an email, drawn */
+.mail{padding:0;overflow:hidden}
+.mail .spot-item{background:#fff;color:var(--s-ink);border:0;border-bottom:1px solid #e6e9f1;padding:8px 16px}
+.mail .spot-item:hover{background:#f1f3f8}
+.mail .spot-item.is-found{background:#fde8e6;box-shadow:inset 4px 0 0 var(--s-red)}
+.mail .spot-item.is-fine{background:#f3faf5;opacity:1;box-shadow:inset 4px 0 0 var(--s-ok)}
+.mail .spot-note{background:#fff;color:var(--s-ink);border-bottom:1px solid #e6e9f1;padding:4px 16px 8px 20px}
+.mail .spot-item.is-fine + .spot-note{color:var(--s-ink-2)}
+.mail .spot-score{padding:8px 16px 12px;margin:0;color:var(--s-ink)}
+.mail.is-complete .spot-score{color:var(--s-ok)}
+.mail-h{background:#eceef5;padding:8px 16px;font-weight:700;color:var(--s-ink)}
+.mail small{display:block;color:var(--s-ink-2);font-size:13px}
+.mail u{color:#1857c9}
+/* choices in a row: one select for each line */
+.sortlist{display:grid;gap:8px;margin:0 0 1em;max-width:66ch}
+.sortlist > div{display:grid;grid-template-columns:minmax(0,1fr) 170px;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);padding:8px 12px}
+.sortlist label{color:var(--ink)}
+@media (max-width:620px){.sortlist > div{grid-template-columns:minmax(0,1fr)}}
+/* a slide plan and other grids of small boxes to write in */
+.slides{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;margin:0 0 1em}
+.slide{--behind:var(--card);background:var(--card);border-top:2px solid var(--track);padding:12px 16px 4px}
+.slide h3{margin:0 0 8px;font-size:17px}
+.slide .label{font-size:12.5px;color:var(--alt);margin:0 0 4px}
+
+/* three places: the model of commit, push and pull */
+.pushlab{--behind:var(--card);background:var(--card);border:1px solid var(--track);margin:0 0 1em}
+.lab-places{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1.25fr) auto minmax(0,1.25fr);gap:0;padding:16px 16px 6px}
+.lab-place{background:var(--paper);border:1px solid var(--line);border-top:2px solid var(--track);padding:10px 12px 12px;min-width:0}
+.lab-place .label{font-size:12px;color:var(--alt);margin:0 0 2px}
+.lab-place h4{margin:0;font:700 17px/1.2 var(--f-display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.lab-sub{margin:0 0 8px;font-size:14px;color:var(--dim)}
+.lab-body{margin:0;padding:0;min-height:96px}
+.lab-list{list-style:none;display:grid;gap:5px;align-content:start}
+.lab-list li{margin:0;padding:5px 8px;border-left:4px solid var(--cyan);background:var(--card);font-size:15px;line-height:1.3;display:flex;flex-wrap:wrap;gap:2px 8px;align-items:baseline}
+.lab-list li.is-theirs{border-left-color:var(--amber)}
+.lab-msg{color:var(--ink);flex:1 1 60%;min-width:0;overflow-wrap:anywhere}
+.lab-who{font:12px var(--f-code);text-transform:uppercase;letter-spacing:.1em;color:var(--dim)}
+.lab-note{font:700 12px var(--f-code);text-transform:uppercase;letter-spacing:.06em;color:var(--warn);flex-basis:100%}
+.lab-clean{font-size:14px;color:var(--dim)}
+.lab-file{margin:0;display:grid;gap:6px;justify-items:start}
+.lab-link{display:grid;align-content:center;justify-items:center;gap:10px;padding:0 6px;font:700 12px var(--f-code);text-transform:uppercase;letter-spacing:.1em;color:var(--track)}
+.lab-link span::after{content:" \2192"}
+.lab-link span.back::after{content:none}
+.lab-link span.back::before{content:"\2190  "}
+.lab-ctrl{padding:8px 16px 0;display:grid;gap:8px}
+.lab-ctrl .btnrow{margin:0}
+.lab-say{margin:10px 16px 6px;padding:8px 12px;border-left:4px solid var(--line-2);background:var(--paper);color:var(--ink);font-weight:700;min-height:2.6em}
+.lab-say[data-kind="ok"]{border-left-color:var(--ok)}
+.lab-say[data-kind="bad"]{border-left-color:var(--bad);background:var(--bad-bg)}
+.lab-arrows{margin:0 16px 12px;font-size:15px;color:var(--ink-2)}
+.lab-arrows b{font:700 14px var(--f-code);color:var(--ink)}
+.lab-count{font:700 15px var(--f-code);color:var(--track)}
+.pushlab.is-complete .pg-score{color:var(--ok)}
+@media (max-width:760px){
+  .lab-places{grid-template-columns:minmax(0,1fr)}
+  .lab-link{grid-auto-flow:column;justify-content:center;padding:6px 0}
+  .lab-link span::after{content:" \2193"}
+  .lab-link span.back::before{content:"\2191  "}
+  .lab-body{min-height:0}
+}
+
+/* ---------- the pretend terminal ---------- (it stays dark in both themes, like a real one) */
+.term{--behind:var(--card);border:1px solid var(--track);background:var(--card);margin:0 0 1em}
+.term-box{background:#050915;color:#ddfaff;font:15px/1.5 var(--f-code);padding:12px 14px;cursor:text}
+.term-screen{height:250px;overflow-y:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+.term-dim{color:#8c9bc0} .term-cmd{color:#fff} .term-err{color:#ffb3b3} .term-pre{white-space:pre-wrap}
+.term-line{display:flex;gap:0;align-items:center;margin-top:4px}
+.term-prompt{color:#8ee36b;white-space:pre}
+.term-in{flex:1;min-width:0;background:transparent;border:0;border-bottom:1px solid #3a4a70;color:#fff;font:inherit;padding:2px 0}
+.term-in:focus{outline:0;border-bottom-color:#ffb020}
+.term-hint{margin-left:6px}
+.term.no-hints .term-hint{display:none}
