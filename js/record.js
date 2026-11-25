@@ -18,9 +18,10 @@ function drawRecord() {
   // A locked track is left out of the record until it opens. Its saved progress is kept.
   const open = Object.keys(TRACKS).filter(track => !isLocked(track));
   open.forEach(track => {
-    const list = inTrack(track), done = list.filter(t => isDone(t.id));
+    // Only the open tasks count. In a track that is open in part (OPEN_UNTIL), the locked tasks are left out too.
+    const list = openIn(track), done = list.filter(t => isDone(t.id));
     const mins = done.reduce((sum, t) => sum + Number(t.dataset.mins), 0);
-    const stages = Array.from(new Set(list.map(t => t.dataset.stage))).filter(s => CHECKPOINTS[s]);
+    const stages = Array.from(new Set(list.map(t => t.dataset.stage))).filter(s => CHECKPOINTS[s] && !stageLocked(s));
     allDone += done.length; allTasks += list.length;
     rows.push(h('tr', {},
       h('td', {text: TRACKS[track]}), h('td', {text: done.length + ' of ' + list.length}),
@@ -34,7 +35,7 @@ function drawRecord() {
   });
   const wall = h('div', {class: 'patch-wall'});
   open.forEach(track => {
-    Array.from(new Set(inTrack(track).map(t => t.dataset.stage))).filter(s => CHECKPOINTS[s]).forEach(s => {
+    Array.from(new Set(openIn(track).map(t => t.dataset.stage))).filter(s => CHECKPOINTS[s] && !stageLocked(s)).forEach(s => {
       wall.append(h('a', {class: 'patch-cell', href: '#cp-' + s}, patchFor(s, cpPassed(s)), h('span', {text: STAGES[s].name})));
     });
   });
@@ -49,6 +50,7 @@ function drawRecord() {
     h('p', {class: 'quiet no-print', text: 'Pass the checkpoint at the end of a stage to earn its patch. Click a patch to open its checkpoint.'}),
     wall,
     ...(open.length < Object.keys(TRACKS).length ? [h('p', {class: 'quiet', text: 'The other areas will unlock soon. Their patches will appear here.'})] : []),
+    ...open.filter(track => lockedRange(track)).map(track => h('p', {class: 'quiet', text: lockedRange(track) + ' of the ' + TRACKS[track] + ' will unlock soon. They are not counted yet.'})),
     h('h2', {text: 'Tasks done'}),
     ...(lists.length ? lists : [h('p', {text: 'Nothing is ticked yet. Open a track and start.'})]));
 }

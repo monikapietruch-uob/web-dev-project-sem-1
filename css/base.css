@@ -68,6 +68,7 @@ a:hover{color:var(--alt)}
 h1:focus{outline:none}
 img,svg{max-width:100%}
 code,pre,kbd{font-family:var(--f-code)}
+kbd{display:inline-block;padding:0 7px;border:1px solid var(--line-2);border-bottom-width:3px;border-radius:5px;background:var(--card-2);color:var(--ink);font-size:.88em;line-height:1.5;white-space:nowrap}
 code{background:var(--card-2);color:var(--code-ink);border-radius:3px;padding:.05em .35em;font-size:.95em;overflow-wrap:anywhere}   /* a long address may break on a small screen */
 .wrap{max-width:1440px;margin:0 auto;padding:0 clamp(18px,5vw,72px)}
 .read{max-width:66ch}

@@ -30,4 +30,10 @@
 .is-locked .st-n,.is-locked .station.cp .st-n{border-color:color-mix(in srgb,var(--stage) 42%,var(--paper));color:var(--dim)}
 .is-locked .st-title,.is-locked .station.cp .st-title{color:var(--dim)}
 .is-locked .station.is-done .st-n{color:#07101f}
+/* one locked row in an open track (OPEN_UNTIL) */
+.station.is-shut .st-n,.station.cp.is-shut .st-n{border-color:color-mix(in srgb,var(--stage) 42%,var(--paper));color:var(--dim)}
+.station.is-shut .st-title,.station.cp.is-shut .st-title{color:var(--dim)}
+.lock-note.part{margin-top:12px}
+.next-locked{flex-basis:100%;display:flex;align-items:center;gap:12px;margin:0;color:var(--track);font-weight:600}
+.next-locked .lock-ico{margin-top:8px}
 .chip.locked{border-color:var(--line-2);color:var(--dim)}

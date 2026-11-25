@@ -11,7 +11,7 @@
 
 const DEMOS = {
   'edit-file': [
-    { scr: 'file',   hot: 'pencil', say: 'Open the file. Click the pencil.' },
+    { scr: 'file',   hot: 'pencil', say: 'Open the file, for example index.html: click its name in the list of files. Then click the pencil at the top right of the file.' },
     { scr: 'edit',   hot: 'line',   say: 'Change the text.', put: { line: '<li>Amara</li>' } },
     { scr: 'edit',   hot: 'commit', say: 'Click “Commit changes…”.' },
     { scr: 'dialog', hot: 'msg',    say: 'Write a short message that says what you changed.', put: { msg: 'Add Amara to the team list' } },
@@ -190,7 +190,7 @@ Demo.prototype.build = function () {
   this.root.append(this.stage,
     h('div', {class: 'demo-side'},
       h('h4', {text: this.root.dataset.title}),
-      h('p', {class: 'demo-note', text: 'A simplified sketch. The real screen has more on it.'}),
+      h('p', {class: 'demo-note', text: 'A simplified picture. The real screen has more on it.'}),
       this.list,
       h('div', {class: 'demo-ctrl'}, back, this.playBtn, next, this.count)));
   this.built = true;

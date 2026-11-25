@@ -126,12 +126,13 @@ function initLooks() {
   $$('[data-look]').forEach(box => {
     const pre = box.previousElementSibling;
     if (!pre) return;
-    const d = box.dataset, html = pre.textContent, title = /<title>([^<]*)<\/title>/i.exec(html);
+    // data-html: draw this HTML in place of the code (a README shows what GitHub makes of its Markdown).
+    const d = box.dataset, html = d.html || pre.textContent, title = /<title>([^<]*)<\/title>/i.exec(html), bar = d.bar || 'In the browser';
     const page = h('div', {class: 'look-page'});
     const tab = title ? h('span', {class: 'look-tab', text: title[1]}) : null;
     if (tab && d.tabNote) { tab.append(h('span', {class: 'pen-note up', text: d.tabNote})); page.classList.add('has-tabnote'); }
-    box.append(h('p', {class: 'look-bar'}, h('span', {text: 'In the browser'}), tab), page);
-    renderShadow(page, {html: html, css: 'img{max-width:100%;height:auto}'});
+    box.append(h('p', {class: 'look-bar'}, h('span', {text: bar}), tab), page);
+    renderShadow(page, {html: html, css: 'img{max-width:100%;height:auto}' + (d.css || '')});   // data-css: extra style for the picture only
     const root = page.firstChild && page.firstChild.shadowRoot, marked = root && d.mark ? root.querySelector(d.mark) : null;
     if (marked && d.markNote) {
       const style = document.createElement('style');
@@ -140,7 +141,7 @@ function initLooks() {
       marked.append(h('span', {class: 'pv-note', text: d.markNote}));
     }
     box.setAttribute('role', 'img');
-    box.setAttribute('aria-label', 'In the browser: ' + box.dataset.look);
+    box.setAttribute('aria-label', bar + ': ' + box.dataset.look);
   });
 }
 
@@ -340,7 +341,14 @@ Pg.prototype.build = function () {
   const answered = Object.keys(this.answer);
   if (answered.length) {
     const next = h('p', {class: 'pg-next'}, h('b', {text: 'Now copy this code into the editor above. '}));
-    if (answered.length > 1) next.append('Each piece goes into the file with the same name, so click that tab first. ');
+    if (answered.length > 1) {
+      // Two pieces (Mission 13, Classes): say which tab to click first, in the order of the pieces above.
+      next.append('Each piece goes into the file with the same name. ');
+      answered.forEach((lang, i) => {
+        const name = this.files[lang] || lang;
+        next.append(i === 0 ? 'First click the tab ' : 'Next, click the tab ', h('b', {text: name}), ' and paste the piece under ' + name + '. ');
+      });
+    }
     // Two tabs but one answer: name the file, so that nobody pastes CSS into the HTML file.
     else if (this.langs.length > 1) next.append('It goes into the file ', h('b', {text: this.files[answered[0]] || answered[0]}), ', so click that tab first. ');
     next.append(this.mode === 'run' ? 'Then click Run, and look at the result in the small browser next to the editor.' : 'Then look at the result in the small browser next to the editor.');
