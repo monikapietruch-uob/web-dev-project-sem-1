@@ -35,6 +35,68 @@ const ASSETS = {};
     '<rect x="215" y="155" width="50" height="8" rx="4" fill="#fff"/>' +
     '<rect x="236" y="50" width="8" height="30" fill="#14213d"/><circle cx="240" cy="46" r="9" fill="#c8102e"/>' +
     '<rect x="190" y="200" width="100" height="70" rx="10" fill="#4a5672"/>');
+  // Two funnier pictures for the Images task (her note of 27 November, 22:04): a cat asleep on a laptop keyboard,
+  // and somebody asleep on a sofa under a blanket, below a REVISION PLAN. campus.jpg and robot.jpg stay, for code saved earlier.
+  ASSETS['images/cat.jpg'] = uri(
+    '<rect width="480" height="300" fill="#f3ead8"/>' +
+    '<rect y="236" width="480" height="64" fill="#8a5a35"/>' +
+    '<rect x="118" y="44" width="244" height="160" rx="10" fill="#14213d"/>' +
+    '<rect x="132" y="58" width="216" height="130" fill="#0b1a2e"/>' +
+    '<text x="144" y="88" font-family="monospace" font-size="17" font-weight="700" fill="#8ee36b">kkkkkkkkkkkkkkkkkkk</text>' +
+    '<text x="144" y="114" font-family="monospace" font-size="17" font-weight="700" fill="#8ee36b">jjjjjjj;;;;;;;;;;;;</text>' +
+    '<text x="144" y="140" font-family="monospace" font-size="17" font-weight="700" fill="#8ee36b">mmmmmmmmmmmmmmmmmm</text>' +
+    '<text x="144" y="166" font-family="monospace" font-size="17" font-weight="700" fill="#8ee36b">8888888888888888888</text>' +
+    '<path d="M98 204 H382 L408 240 H72 Z" fill="#c9ccd6"/>' +
+    '<path d="M150 214 C 104 222, 86 250, 100 296" stroke="#e08a2e" stroke-width="18" fill="none" stroke-linecap="round"/>' +
+    '<path d="M100 270 C 96 280, 98 288, 100 296" stroke="#b8400f" stroke-width="18" fill="none" stroke-linecap="round"/>' +
+    '<ellipse cx="236" cy="214" rx="104" ry="32" fill="#e08a2e"/>' +
+    '<path d="M180 186 C 186 200, 186 222, 180 240" stroke="#b8400f" stroke-width="7" fill="none" stroke-linecap="round"/>' +
+    '<path d="M212 183 C 218 200, 218 224, 212 244" stroke="#b8400f" stroke-width="7" fill="none" stroke-linecap="round"/>' +
+    '<path d="M244 183 C 250 200, 250 224, 244 244" stroke="#b8400f" stroke-width="7" fill="none" stroke-linecap="round"/>' +
+    '<path d="M276 186 C 282 200, 282 222, 276 240" stroke="#b8400f" stroke-width="7" fill="none" stroke-linecap="round"/>' +
+    '<ellipse cx="200" cy="238" rx="20" ry="9" fill="#f2b469"/>' +
+    '<ellipse cx="262" cy="240" rx="20" ry="9" fill="#f2b469"/>' +
+    '<path d="M318 184 L322 150 L344 174 Z" fill="#e08a2e"/>' +
+    '<path d="M362 172 L384 148 L388 184 Z" fill="#e08a2e"/>' +
+    '<path d="M324 178 L326 160 L338 174 Z" fill="#f2a5b8"/>' +
+    '<path d="M366 172 L380 158 L382 178 Z" fill="#f2a5b8"/>' +
+    '<circle cx="352" cy="204" r="36" fill="#e08a2e"/>' +
+    '<path d="M330 202 q8 7 16 0" stroke="#14213d" stroke-width="3.5" fill="none" stroke-linecap="round"/>' +
+    '<path d="M358 202 q8 7 16 0" stroke="#14213d" stroke-width="3.5" fill="none" stroke-linecap="round"/>' +
+    '<path d="M347 214 l5 5 l5 -5 z" fill="#a1286e"/>' +
+    '<path d="M312 216 l-22 -3 M312 222 l-22 3 M392 216 l22 -3 M392 222 l22 3" stroke="#14213d" stroke-width="2" stroke-linecap="round"/>' +
+    '<text x="396" y="150" font-family="sans-serif" font-size="24" font-weight="700" fill="#1857c9">z</text>' +
+    '<text x="416" y="118" font-family="sans-serif" font-size="32" font-weight="700" fill="#1857c9">z</text>' +
+    '<text x="440" y="80" font-family="sans-serif" font-size="42" font-weight="700" fill="#1857c9">Z</text>');
+  ASSETS['images/sofa.jpg'] = uri(
+    '<rect width="480" height="300" fill="#dfe7f2"/>' +
+    '<rect x="330" y="30" width="110" height="80" fill="#f4f5f9" stroke="#8b93a8" stroke-width="4"/>' +
+    '<text x="345" y="66" font-family="sans-serif" font-size="15" font-weight="700" fill="#14213d">REVISION</text>' +
+    '<text x="345" y="88" font-family="sans-serif" font-size="15" font-weight="700" fill="#14213d">PLAN</text>' +
+    '<rect y="252" width="480" height="48" fill="#b98b5e"/>' +
+    '<rect x="56" y="104" width="368" height="96" rx="28" fill="#00727a"/>' +
+    '<rect x="44" y="168" width="392" height="72" rx="22" fill="#0a8a93"/>' +
+    '<rect x="28" y="146" width="58" height="100" rx="24" fill="#00626a"/>' +
+    '<rect x="394" y="146" width="58" height="100" rx="24" fill="#00626a"/>' +
+    '<rect x="66" y="240" width="16" height="16" fill="#3b2a1a"/>' +
+    '<rect x="398" y="240" width="16" height="16" fill="#3b2a1a"/>' +
+    '<circle cx="108" cy="160" r="24" fill="#5a3b22"/>' +
+    '<path d="M86 196 C 120 112, 300 112, 372 196 Z" fill="#a1286e"/>' +
+    '<path d="M150 150 C 200 136, 260 136, 316 152" stroke="#ffb020" stroke-width="8" fill="none"/>' +
+    '<path d="M122 176 C 190 160, 280 160, 350 178" stroke="#ffb020" stroke-width="8" fill="none"/>' +
+    '<rect x="364" y="166" width="34" height="15" rx="7" fill="#ffb020"/>' +
+    '<rect x="364" y="183" width="34" height="15" rx="7" fill="#1857c9"/>' +
+    '<rect x="372" y="183" width="6" height="15" fill="#f4f5f9"/>' +
+    '<rect x="384" y="183" width="6" height="15" fill="#f4f5f9"/>' +
+    '<path d="M300 268 h76 l10 14 h-96 z" fill="#c9ccd6"/>' +
+    '<rect x="304" y="228" width="68" height="42" rx="4" fill="#14213d"/>' +
+    '<rect x="310" y="234" width="56" height="30" fill="#5aa9ff"/>' +
+    '<text x="315" y="253" font-family="sans-serif" font-size="10" font-weight="700" fill="#14213d">Episode 7</text>' +
+    '<rect x="200" y="246" width="22" height="24" rx="3" fill="#f4f5f9"/>' +
+    '<path d="M222 252 q10 6 0 12" stroke="#f4f5f9" stroke-width="4" fill="none"/>' +
+    '<text x="140" y="96" font-family="sans-serif" font-size="24" font-weight="700" fill="#1857c9">z</text>' +
+    '<text x="118" y="66" font-family="sans-serif" font-size="32" font-weight="700" fill="#1857c9">z</text>' +
+    '<text x="90" y="30" font-family="sans-serif" font-size="40" font-weight="700" fill="#1857c9">Z</text>');
 })();
 
 const PGS = [];
