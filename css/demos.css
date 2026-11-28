@@ -159,6 +159,25 @@
 .mk-key{display:inline-grid;place-items:center;min-width:44px;height:44px;border:2px solid var(--s-ink);border-bottom-width:5px;border-radius:8px;font:700 26px/1 var(--f-code);background:#fff;color:var(--s-ink)}
 .mk-code .clash{background:#ffe3e0;display:inline-block;min-width:100%}
 @media (max-width:620px){.vs{grid-template-columns:30px 104px minmax(0,1fr);font-size:12px}.vs-code{font-size:11px}}
+/* VS Code writes the skeleton (Emmet), drawn as VS Code shows it: the ! on line 1, the small list under it and the box beside it (Mission 03).
+   Always dark, like VS Code, so its red notes have their own bright red. */
+.vsx{margin:12px 0;max-width:660px}
+.vsx-win{background:#1e1e1e;color:#d4d4d4;border:1px solid #454545;border-radius:8px;overflow:hidden;padding-bottom:14px;font:13px/1.45 var(--f-body)}
+.vsx .vs-tabs{border-bottom:1px solid #2b2b2b}
+.vsx-line{display:flex;align-items:center;padding:8px 10px 4px;font:14px/1.5 var(--f-code);color:#d4d4d4}
+.vsx-line .n{color:#858585;width:2.4em;flex:none}
+.vsx-caret{display:inline-block;width:2px;height:1.15em;background:#aeafad;vertical-align:-3px;margin-left:1px}
+.vsx-pop{display:grid;grid-template-columns:minmax(130px,180px) minmax(0,1fr);gap:4px;align-items:start;margin:0 10px 0 calc(2.4em + 10px)}
+.vsx-sug{background:#252526;border:1px solid #454545;border-radius:4px;padding:3px;font:14px/1.5 var(--f-code)}
+.vsx-sug > div{display:flex;align-items:center;gap:8px;padding:1px 6px;border:1px solid transparent;border-radius:3px}
+.vsx-sug .hit{background:#04395e;border-color:#0a7aca;color:#fff}
+.vsx-sug svg{width:14px;height:14px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round}
+.vsx-prev{background:#252526;border:1px solid #454545;border-radius:4px;padding:8px 12px;min-width:0}
+.vsx-prev-top{display:flex;justify-content:space-between;gap:8px;margin:0 0 8px;font:13px/1.4 var(--f-code);color:#c5c5c5}
+.vsx-prev pre{margin:0;font:13px/1.55 var(--f-body);white-space:pre-wrap;overflow-wrap:anywhere;color:#d4d4d4;tab-size:4}
+.vsx .pen-note{color:#ff7b7b}
+.vsx-sug .pen-note{margin:8px 0 4px 6px}
+@media (max-width:620px){.vsx-pop{grid-template-columns:minmax(0,1fr);margin-left:10px}}
 /* the journey of a page: three places and the messages between them */
 .jr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;text-align:center}
 .jr-node{border:2px solid var(--s-ink);border-radius:8px;padding:6px 4px;font-weight:700;background:#f1f3f8}

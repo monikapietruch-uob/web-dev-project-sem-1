@@ -97,6 +97,79 @@ const ASSETS = {};
     '<text x="140" y="96" font-family="sans-serif" font-size="24" font-weight="700" fill="#1857c9">z</text>' +
     '<text x="118" y="66" font-family="sans-serif" font-size="32" font-weight="700" fill="#1857c9">z</text>' +
     '<text x="90" y="30" font-family="sans-serif" font-size="40" font-weight="700" fill="#1857c9">Z</text>');
+  // Two funny places to study, in place of the library and the cat in the Images practice (her note of 27 November, 22:52).
+  // bus.jpg: the top deck of a bus. Houses fly past the window, the laptop jumps (BUMP!) and the coffee leaves its cup.
+  ASSETS['images/bus.jpg'] = uri(
+    '<rect width="480" height="300" fill="#efe6d3"/>' +
+    '<rect x="150" y="6" width="190" height="24" rx="4" fill="#14213d"/>' +
+    '<text x="158" y="22" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#ffb020">NEXT STOP: UNIVERSITY SQUARE</text>' +
+    '<rect x="20" y="40" width="440" height="120" rx="12" fill="#cfe6f5" stroke="#8b93a8" stroke-width="6"/>' +
+    '<rect x="23" y="146" width="434" height="11" fill="#7fae6a"/>' +
+    '<rect x="40" y="100" width="60" height="46" fill="#b8400f"/><path d="M34 100 L70 74 L106 100 Z" fill="#14213d"/>' +
+    '<rect x="124" y="92" width="70" height="54" fill="#f4f5f9"/><path d="M118 92 L159 64 L200 92 Z" fill="#a1286e"/>' +
+    '<rect x="152" y="118" width="14" height="28" fill="#1857c9"/>' +
+    '<rect x="220" y="106" width="56" height="40" fill="#2a7230"/><path d="M214 106 L248 84 L282 106 Z" fill="#7d6000"/>' +
+    '<circle cx="318" cy="108" r="24" fill="#2a7230"/><rect x="314" y="126" width="8" height="20" fill="#7d6000"/>' +
+    '<rect x="356" y="96" width="80" height="50" fill="#7d6000"/><path d="M350 96 L396 70 L442 96 Z" fill="#b8400f"/>' +
+    '<path d="M44 62 h70 M196 56 h90 M330 64 h96 M120 74 h40" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity=".9"/>' +
+    '<rect y="280" width="480" height="20" fill="#4a5672"/>' +
+    '<rect x="34" y="176" width="186" height="84" rx="18" fill="#1857c9"/>' +
+    '<rect x="262" y="176" width="186" height="84" rx="18" fill="#1857c9"/>' +
+    '<path d="M60 194 l7 7 l-7 7 l-7 -7 z M200 194 l7 7 l-7 7 l-7 -7 z M284 196 l7 7 l-7 7 l-7 -7 z M428 194 l7 7 l-7 7 l-7 -7 z" fill="#ffb020"/>' +
+    '<circle cx="186" cy="246" r="4" fill="#a1286e"/><circle cx="300" cy="246" r="4" fill="#a1286e"/><circle cx="420" cy="232" r="4" fill="#a1286e"/>' +
+    '<rect x="24" y="250" width="206" height="34" rx="12" fill="#14213d"/>' +
+    '<rect x="252" y="250" width="206" height="34" rx="12" fill="#14213d"/>' +
+    '<rect x="236" y="34" width="10" height="246" fill="#ffb020"/>' +
+    '<rect x="223" y="172" width="36" height="20" rx="4" fill="#c8102e"/>' +
+    '<text x="228" y="186" font-family="sans-serif" font-size="10" font-weight="700" fill="#ffffff">STOP</text>' +
+    '<path d="M70 232 h100 l6 8 h-112 z" fill="#c9ccd6"/>' +
+    '<rect x="78" y="176" width="86" height="56" rx="4" fill="#14213d"/>' +
+    '<rect x="84" y="182" width="74" height="44" fill="#5aa9ff"/>' +
+    '<text x="90" y="200" font-family="sans-serif" font-size="10" font-weight="700" fill="#14213d">essay.docx</text>' +
+    '<text x="90" y="216" font-family="sans-serif" font-size="10" fill="#14213d">3 words</text>' +
+    '<path d="M80 246 q6 -4 12 0 M150 246 q6 -4 12 0" stroke="#ffb020" stroke-width="3" fill="none" stroke-linecap="round"/>' +
+    '<text x="168" y="174" font-family="sans-serif" font-size="20" font-weight="800" fill="#c8102e">BUMP!</text>' +
+    '<g transform="rotate(-28 352 230)"><path d="M338 210 l6 34 h20 l6 -34 z" fill="#f4f5f9"/><rect x="335" y="204" width="38" height="8" rx="3" fill="#b8400f"/></g>' +
+    '<path d="M330 200 C 334 170, 368 160, 392 186" stroke="#6b4a2b" stroke-width="7" fill="none" stroke-linecap="round"/>' +
+    '<circle cx="320" cy="182" r="5" fill="#6b4a2b"/><circle cx="364" cy="152" r="6" fill="#6b4a2b"/><circle cx="404" cy="170" r="5" fill="#6b4a2b"/>');
+  // kitchen.jpg: a standing desk that is really an ironing board. The iron steams, the washing-up has become a tower,
+  // and a note on the wall says WASH UP!!
+  ASSETS['images/kitchen.jpg'] = uri(
+    '<rect width="480" height="300" fill="#dfeee0"/>' +
+    '<rect y="112" width="480" height="64" fill="#f4f5f9"/>' +
+    '<path d="M0 128 h480 M0 144 h480 M0 160 h480 M32 112 v64 M64 112 v64 M96 112 v64 M128 112 v64 M160 112 v64 M192 112 v64 M224 112 v64 M256 112 v64 M288 112 v64 M320 112 v64 M352 112 v64 M384 112 v64 M416 112 v64 M448 112 v64" stroke="#c9ccd6" stroke-width="1.5"/>' +
+    '<rect x="180" y="30" width="62" height="50" fill="#ffe36e" transform="rotate(-6 211 55)"/>' +
+    '<text x="190" y="52" font-family="sans-serif" font-size="13" font-weight="800" fill="#14213d" transform="rotate(-6 211 55)">WASH</text>' +
+    '<text x="190" y="70" font-family="sans-serif" font-size="13" font-weight="800" fill="#c8102e" transform="rotate(-6 211 55)">UP!!</text>' +
+    '<rect y="172" width="214" height="128" fill="#b98b5e"/>' +
+    '<rect y="166" width="218" height="12" fill="#8a6a3a"/>' +
+    '<path d="M150 166 v-28 h22 v8" stroke="#8b93a8" stroke-width="6" fill="none"/>' +
+    '<rect x="35" y="160" width="92" height="8" rx="4" fill="#f4f5f9" stroke="#8b93a8" stroke-width="1"/>' +
+    '<rect x="40" y="150" width="92" height="8" rx="4" fill="#c9ccd6" stroke="#8b93a8" stroke-width="1"/>' +
+    '<rect x="45" y="140" width="92" height="8" rx="4" fill="#f4f5f9" stroke="#8b93a8" stroke-width="1"/>' +
+    '<rect x="35" y="130" width="92" height="8" rx="4" fill="#c9ccd6" stroke="#8b93a8" stroke-width="1"/>' +
+    '<rect x="40" y="120" width="92" height="8" rx="4" fill="#f4f5f9" stroke="#8b93a8" stroke-width="1"/>' +
+    '<rect x="45" y="110" width="92" height="8" rx="4" fill="#c9ccd6" stroke="#8b93a8" stroke-width="1"/>' +
+    '<rect x="35" y="100" width="92" height="8" rx="4" fill="#f4f5f9" stroke="#8b93a8" stroke-width="1"/>' +
+    '<rect x="40" y="90" width="92" height="8" rx="4" fill="#c9ccd6" stroke="#8b93a8" stroke-width="1"/>' +
+    '<rect x="45" y="80" width="92" height="8" rx="4" fill="#f4f5f9" stroke="#8b93a8" stroke-width="1"/>' +
+    '<rect x="35" y="70" width="92" height="8" rx="4" fill="#c9ccd6" stroke="#8b93a8" stroke-width="1"/>' +
+    '<rect x="40" y="60" width="92" height="8" rx="4" fill="#f4f5f9" stroke="#8b93a8" stroke-width="1"/>' +
+    '<rect x="45" y="50" width="92" height="8" rx="4" fill="#c9ccd6" stroke="#8b93a8" stroke-width="1"/>' +
+    '<rect x="62" y="30" width="22" height="20" rx="3" fill="#c8102e"/>' +
+    '<path d="M84 34 q10 6 0 12" stroke="#c8102e" stroke-width="4" fill="none"/>' +
+    '<path d="M244 286 L404 176 M404 286 L244 176" stroke="#8b93a8" stroke-width="7" stroke-linecap="round"/>' +
+    '<rect x="232" y="282" width="26" height="8" rx="3" fill="#4a5672"/><rect x="392" y="282" width="26" height="8" rx="3" fill="#4a5672"/>' +
+    '<path d="M222 152 H412 C 442 152, 462 158, 468 164 C 462 170, 442 176, 412 176 H222 Z" fill="#a1286e"/>' +
+    '<path d="M240 158 h160 M240 170 h160" stroke="#ffb020" stroke-width="3" stroke-dasharray="10 8"/>' +
+    '<path d="M268 146 h100 l6 6 h-112 z" fill="#c9ccd6"/>' +
+    '<rect x="276" y="88" width="86" height="58" rx="4" fill="#14213d"/>' +
+    '<rect x="282" y="94" width="74" height="46" fill="#5aa9ff"/>' +
+    '<text x="287" y="112" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#14213d">essay_final</text>' +
+    '<text x="287" y="128" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#14213d">FINAL_2.docx</text>' +
+    '<path d="M398 152 L452 152 Q458 130 432 124 L406 124 Q398 124 396 134 Z" fill="#1857c9"/>' +
+    '<path d="M408 124 Q422 104 440 124" stroke="#14213d" stroke-width="6" fill="none"/>' +
+    '<path d="M416 98 q-6 -8 0 -16 q6 -8 0 -16 M432 98 q-6 -8 0 -16 q6 -8 0 -16 M448 100 q-6 -8 0 -16 q6 -8 0 -16" stroke="#8b93a8" stroke-width="3" fill="none" stroke-linecap="round"/>');
 })();
 
 const PGS = [];
@@ -189,7 +262,10 @@ function initLooks() {
     const pre = box.previousElementSibling;
     if (!pre) return;
     // data-html: draw this HTML in place of the code (a README shows what GitHub makes of its Markdown).
-    const d = box.dataset, html = d.html || pre.textContent, title = /<title>([^<]*)<\/title>/i.exec(html), bar = d.bar || 'In the browser';
+    // Red pen notes in the code (span.pen-note) are for the reader, so they are left out of the picture.
+    const code = pre.cloneNode(true);
+    $$('.pen-note', code).forEach(note => note.remove());
+    const d = box.dataset, html = d.html || code.textContent, title = /<title>([^<]*)<\/title>/i.exec(html), bar = d.bar || 'In the browser';
     const page = h('div', {class: 'look-page'});
     const tab = title ? h('span', {class: 'look-tab', text: title[1]}) : null;
     if (tab && d.tabNote) { tab.append(h('span', {class: 'pen-note up', text: d.tabNote})); page.classList.add('has-tabnote'); }

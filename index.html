@@ -666,59 +666,193 @@
          + then "Upload images and files" takes PNG and JPG. The university's own AI page could not be opened: check it and the unit's rules. -->
     <div class="block" data-label="Learn it with Copilot">
       <p class="read">You have Microsoft Copilot through the university. It is an AI chat, and it can be a patient teacher. It can explain an idea that you like, show you a small version of it in HTML and CSS, and make the code simpler until you understand every line. It never sighs when you ask again.</p>
-      <ol class="steps read">
-        <li><b>Find the portfolio.</b> One of the three above, or your fourth one.</li>
-        <li><b>List the ideas that you like</b> in the box under these steps, one line each. Choose one idea and take a screenshot of it. Windows: press the Windows key + Shift + S and drag over the part that you want; the picture is copied, ready to paste. Mac: press Command + Shift + 4 and drag; the picture is saved on your desktop.</li>
-        <li><b>Open Copilot with your university account.</b> Go to <a href="https://m365copilot.com">m365copilot.com</a> and sign in with the account that ends in <code>@study.beds.ac.uk</code>. Look for a small shield at the top of the chat. It shows that your chat is protected.</li>
-        <li><b>Show Copilot the idea.</b> Paste the screenshot into the message box, or click the <b class="ui">+</b> and choose <b class="ui">Upload images and files</b>. Then copy prompt 1, change the parts in square brackets, and send it. If the picture does not go in, describe the idea in words.</li>
-        <li><b>Ask again.</b> The first answer is rarely the best one. Use prompts 2, 3 and 4: make it simpler, explain it, plan it. People who use AI well ask again and again.</li>
-        <li><b>Keep the chat,</b> or copy the useful parts into your notes. You will use the idea on your own page in Mission&nbsp;08, <a href="#s-html-6">Put it together</a>, and Mission&nbsp;14, <a href="#s-css-5">Style your page</a>.</li>
-      </ol>
-      <div class="field read">
-        <label for="look2-ideas">Ideas that I like, one line each</label>
-        <textarea class="notes" id="look2-ideas" data-save="look2-ideas"></textarea>
+      <!-- The first rule, in a red frame at the top (her note of 27 November, 22:25): beginners should never ask AI to do the task for them;
+           faster, but you forget; the child who uses AI for every sum; the basics still have to be learned. -->
+      <div class="callout rule read"><b>The first rule: do not ask AI to do the task for you</b>
+        <p>Yes, it would be faster. You would also forget all of it by next week. Even the part where it was faster.</p>
+        <p>If you have children, or you remember being one, think of a child in primary school who asks AI for every sum. Seven plus five? AI. Six times eight? AI. The homework is perfect, and the child is very proud. Then come fractions, percentages and long division, and the child is lost, because the basics are not there. Nobody can build on numbers that they never learned.</p>
+        <p>HTML and CSS are your seven plus five. Layout, JavaScript, Python and every job interview with a coding test stand on them. So AI is welcome, but as a teacher, not as a ghost writer. You write the code. AI helps you understand it.</p>
+        <div class="slip-pair">
+          <div><p class="label ok">Ask it to</p><ul>
+            <li>explain an idea or a line of code</li>
+            <li>show you a small example, then you write your own</li>
+            <li>make an explanation simpler</li>
+            <li>test you with a few questions</li>
+            <li>tell you why your code does not work</li>
+          </ul></div>
+          <div><p class="label bad">Do not ask it to</p><ul>
+            <li>do the task for you</li>
+            <li>write your page</li>
+            <li>give you the final code to copy</li>
+            <li>answer the checkpoint questions</li>
+          </ul></div>
+        </div>
       </div>
-      <p class="read">A <b>prompt</b> is the message that you type to the AI. Tell it who you are, what you know, what you want and how much time you have. Open a prompt, copy it, and change the parts in square brackets.</p>
-      <details class="reveal read">
-        <summary>Prompt 1: Teach me this idea</summary>
-        <pre class="code prompt" id="look2-prompt-1">Be my web design teacher. I am a foundation year student at university. I know only basic HTML and CSS: headings, paragraphs, lists, links, images, classes, colours, fonts, margin, padding and border.
+      <!-- "Who you are" means you as a student: what you study, and that you are a beginner (her note of 27 November, 22:27). -->
+      <p class="read">A <b>prompt</b> is the message that you type to the AI. First tell it who you are as a student: for example, that you study computer science and that you are a beginner. It does not need your name. Then tell it what you know, what you want and how much time you have. The prompts are in the steps below: copy one, then change the parts in square brackets.</p>
+      <!-- The steps, with the prompts inside them in the order of use (her note of 27 November, 22:30): a new portfolio from the list, two ideas,
+           the Snipping Tool on Windows, the picture and the words in two easy parts, prompt 1 in step 5 and prompts 2 to 4 in step 6.
+           Checked in Microsoft's help on 27 November 2026: Snipping Tool opens from Start (type snipping tool) or with Windows logo key + Shift + S;
+           choose the snipping mode, then New; after a snip, Windows 11 saves it in the Screenshots folder. -->
+      <ol class="steps read">
+        <li><b>Find a new portfolio.</b> Go back to the list <a href="https://github.com/emmabostian/developer-portfolios">developer-portfolios on GitHub</a> (the same list as in Find a fourth, above) and choose a portfolio that you have not looked at yet.</li>
+        <li><b>Choose two ideas that you like</b> on that portfolio, and write them in this box, one on each line. For example: “the projects are cards with a picture”, or “a button at the top jumps to the contact details”.
+          <div class="field">
+            <label for="look2-ideas">Two ideas that I like</label>
+            <textarea class="notes" id="look2-ideas" data-save="look2-ideas"></textarea>
+          </div>
+        </li>
+        <li><b>Take a screenshot of one of the two ideas.</b>
+          <ul>
+            <li><b>Windows, with the Snipping Tool:</b> click Start, type <code>snipping tool</code> and open it. Choose the snipping mode <b class="ui">Rectangle</b>, click <b class="ui">New</b>, and drag over the part that you want. The picture is copied, ready to paste, and Windows 11 also saves it in Pictures, in the folder Screenshots. The quick way to the same tool: press the Windows key + Shift + S, then drag.</li>
+            <li><b>Mac:</b> press Command + Shift + 4, then drag over the part that you want. The picture is saved on your desktop.</li>
+          </ul>
+        </li>
+        <li><b>Open Copilot with your university account.</b> Go to <a href="https://m365copilot.com">m365copilot.com</a> and sign in with the account that ends in <code>@study.beds.ac.uk</code>. Look for a small shield at the top of the chat. It shows that your chat is protected.</li>
+        <li><b>Give Copilot the picture and prompt 1</b>, in one message.
+          <ul>
+            <li><b>First the picture.</b> Windows: click in the message box and press Ctrl + V. Mac: click the <b class="ui">+</b> by the message box, choose <b class="ui">Upload images and files</b>, and pick the screenshot on your desktop. You should now see a small copy of your picture in the message box. (On Windows, if nothing appears, use the <b class="ui">+</b> in the same way and pick the picture in Pictures, Screenshots.)</li>
+            <li><b>Then the words.</b> Click <b class="ui">Copy prompt 1</b> below, paste the prompt into the same message box, and change the parts in square brackets. Then send the message.</li>
+            <li>No picture at all? Describe the idea in words in the prompt. That works too.</li>
+          </ul>
+          <p class="prompt-head"><b>Prompt 1: Teach me this idea</b></p>
+          <pre class="code prompt" id="look2-prompt-1">Be my web design teacher. I am a foundation year student of [computer science / cyber security / electronic engineering] at university, and a beginner in coding. I know only basic HTML and CSS: headings, paragraphs, lists, links, images, classes, colours, fonts, margin, padding and border.
 The screenshot shows an idea that I like on a developer's portfolio: [describe the idea in one sentence, for example: each project is a card with a picture, a title and one sentence].
 I do not want to copy their page. Please:
 1. Explain in simple English how this idea works.
-2. Show me a very simple version in HTML and CSS only, with no JavaScript. Use your own example text and different colours.
-3. Explain each line of the code in one short sentence.
+2. Show me a very simple version in HTML and CSS, with no JavaScript. Use only the HTML and CSS from my list, your own example text and different colours.
+3. You may use one new thing that is not on my list. If you do, put it in a separate section called "One new thing", explain it very clearly and show it in a small example.
+4. Explain every example line by line, one short sentence for each line.
 I have [1 day / 1 week] to add this to my own page.</pre>
-        <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-prompt-1">Copy prompt 1</button></p>
-        <p><b>Why say how much time you have?</b> With 1 day, Copilot should suggest one small thing that you can finish. With 1 week, it can split a bigger idea into small steps.</p>
-      </details>
+          <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-prompt-1">Copy prompt 1</button></p>
+          <p><b>Why say how much time you have?</b> With 1 day, Copilot should suggest one small thing that you can finish. With 1 week, it can split a bigger idea into small steps.</p>
+        </li>
+        <li><b>Ask again.</b> The first answer is rarely the best one. People who use AI well ask again and again. Choose the prompt that fits, copy it into the same chat, and send it.
+          <p class="prompt-head"><b>Prompt 2: Make it simpler.</b> Use it when the answer is long, or has words and code that you do not know.</p>
+          <!-- Only the HTML and CSS from my list, plus at most one new thing in its own section, and every example line by line (her note of 27 November, 22:32). -->
+          <pre class="code prompt" id="look2-prompt-2">This is too difficult for me. Make it simpler: fewer lines, and only the HTML and CSS from my list. You may give me one new thing that is not on my list. If you do, put it in a separate section called "One new thing", explain it very clearly and show it in a small example. Explain every example line by line, one short sentence for each line.</pre>
+          <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-prompt-2">Copy prompt 2</button></p>
+          <p class="prompt-head"><b>Prompt 3: Explain it and test me.</b> Use it for a line that you do not understand.</p>
+          <pre class="code prompt" id="look2-prompt-3">Explain line [number] again, with an example from everyday life. Then ask me three short questions to check that I understand the code. Ask one question at a time, and wait for my answer.</pre>
+          <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-prompt-3">Copy prompt 3</button></p>
+          <p class="prompt-head"><b>Prompt 4: Plan it for my time.</b> Use it when you understand the idea and want to build it.</p>
+          <pre class="code prompt" id="look2-prompt-4">I have [1 day / 1 week], about [20 minutes] a day. Split the work into small steps that fit this time. After each step, tell me how I can check that it works.</pre>
+          <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-prompt-4">Copy prompt 4</button></p>
+        </li>
+        <li><b>Keep the chat,</b> or copy the useful parts into your notes. You will use the idea on your own page in Mission&nbsp;08, <a href="#s-html-6">Put it together</a>, and Mission&nbsp;14, <a href="#s-css-5">Style your page</a>.</li>
+      </ol>
       <details class="reveal read">
-        <summary>Prompts 2, 3 and 4: Ask again</summary>
-        <p><b>Prompt 2: Make it simpler.</b> Use it when the answer is long, or has words and code that you do not know.</p>
-        <pre class="code prompt" id="look2-prompt-2">This is too difficult for me. Make it simpler: fewer lines, and only the HTML and CSS from my list. Then tell me what each part does.</pre>
-        <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-prompt-2">Copy prompt 2</button></p>
-        <p><b>Prompt 3: Explain it and test me.</b> Use it for a line that you do not understand.</p>
-        <pre class="code prompt" id="look2-prompt-3">Explain line [number] again, with an example from everyday life. Then ask me three short questions to check that I understand the code. Ask one question at a time, and wait for my answer.</pre>
-        <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-prompt-3">Copy prompt 3</button></p>
-        <p><b>Prompt 4: Plan it for my time.</b></p>
-        <pre class="code prompt" id="look2-prompt-4">I have [1 day / 1 week], about [20 minutes] a day. Split the work into small steps that fit this time. After each step, tell me how I can check that it works.</pre>
-        <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-prompt-4">Copy prompt 4</button></p>
-      </details>
-      <details class="reveal read">
-        <summary>Use Copilot fairly</summary>
+        <summary>Use Copilot fairly, with three activities</summary>
         <ul>
           <li><b>Use your university account.</b> Check for the shield: then your chat is protected.</li>
           <li><b>Borrow the idea, not the page.</b> Ask Copilot to teach you how an idea works. Do not ask it to copy another person's text, pictures or design.</li>
           <li><b>Keep private things out.</b> No passwords, no personal details, and no classmate's work without asking them.</li>
           <li><b>Check what it tells you.</b> AI makes mistakes, and it sometimes invents tags that do not exist. Try the code, and ask your tutor if something looks strange.</li>
-          <li><b>If you cannot explain the code, it is not yours yet.</b> Type it yourself, change it, and ask again until every line makes sense.</li>
-          <li><b>Marked work has its own rules.</b> They can be different in every unit, so read the brief or ask your tutor first. If AI is allowed, say that you used it, and how. You are responsible for what you hand in.</li>
+          <li><b>If you cannot explain the code, it is not yours yet.</b> Type it yourself, change it, and ask again until every line makes sense.
+            <!-- Three activities to open, right under this rule (her note of 27 November, 22:36): choose the explanation, fill the gaps in the explanation,
+                 explain it yourself. The code uses only the HTML of Missions 04 to 07. Each one has its answers, and a prompt that makes Copilot
+                 do the same with the code in the student's own chat. -->
+            <p class="try-intro">Can you explain it? Practise with these three activities. They use the HTML from Missions&nbsp;04 to 07, and each one has the answers. Then each one gives you a prompt, so that Copilot can do the same with the code in your own chat.</p>
+            <details class="reveal try">
+              <summary>Activity 1: Choose the right explanation</summary>
+              <p>Copilot gave you this code for a project card. Below are three explanations of the picture line and three of the link line. Only one of each is right. AI sometimes gives explanations like the wrong ones, so learn to spot them.</p>
+<pre class="code softwrap"><code>&lt;h2&gt;My first web page&lt;/h2&gt;
+&lt;img src="images/cat.jpg" alt="A ginger cat asleep on a laptop"&gt;
+&lt;p&gt;A page about my study partner.&lt;/p&gt;
+&lt;a href="https://github.com/your-name"&gt;See the code&lt;/a&gt;</code></pre>
+              <div class="quiz">
+                <fieldset class="q ask" data-right="2">
+                  <legend>Line 2, the <code>&lt;img&gt;</code>. Which explanation is right?</legend>
+                  <div class="q-opts">
+                    <button type="button">It shows the picture, and the words in alt appear under it as a caption.</button>
+                    <button type="button">It shows the picture cat.jpg from the folder images. The words in alt take the place of the picture when someone cannot see it.</button>
+                    <button type="button">It makes a link to the picture. Click the words in alt, and the picture opens.</button>
+                  </div>
+                  <p class="q-why" hidden><code>src</code> (source) says which file to show. <code>alt</code> (alternative text) is read aloud by a screen reader, and the browser shows it when the file does not load. It is not a caption: for a caption you need <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>. And a link needs <code>&lt;a&gt;</code>.</p>
+                </fieldset>
+                <fieldset class="q ask" data-right="3">
+                  <legend>Line 4, the <code>&lt;a&gt;</code>. Which explanation is right?</legend>
+                  <div class="q-opts">
+                    <button type="button">a is short for address. The line writes the address of the GitHub page on your page.</button>
+                    <button type="button">It shows the GitHub page inside your page, under the paragraph.</button>
+                    <button type="button">It makes the words “See the code” a link. href says where the link goes: here, a page on GitHub.</button>
+                  </div>
+                  <p class="q-why" hidden><code>a</code> is short for anchor, and <code>href</code> (hypertext reference) says where the link goes. The visitor sees only the words “See the code”. The GitHub page opens when they click them.</p>
+                </fieldset>
+              </div>
+              <p class="prompt-head"><b>Now with your own code.</b> Copy this prompt into your Copilot chat from step 5. Copilot makes the same kind of question about the code that it gave you.</p>
+              <pre class="code prompt" id="look2-try-1">Take the code that you gave me in this chat. Choose one line. Give me three short explanations of that line, labelled A, B and C. Only one of them is right. Do not tell me which one. Wait for my answer, then tell me if I am right, and why the other two explanations are wrong.</pre>
+              <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-try-1">Copy the prompt</button></p>
+            </details>
+            <details class="reveal try">
+              <summary>Activity 2: Fill the gaps in the explanation</summary>
+              <p>You asked Copilot to explain this code, one line at a time. Some words are missing from its explanation. Type them in the gaps, and choose from the words in the box. One word is extra.</p>
+<pre class="code softwrap"><code>&lt;h2&gt;Find me online&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/your-name"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.linkedin.com/in/your-name"&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+              <div class="gaps">
+                <p class="wordbox"><b>Words:</b> closes · heading · indentation · item · link · ordered · text · unordered · where</p>
+                <p><b>Line 1:</b> <code>&lt;h2&gt;</code> makes a <input type="text" class="gap" data-answer="heading" aria-label="Gap 1" autocomplete="off" spellcheck="false">, a little smaller than an <code>&lt;h1&gt;</code>.</p>
+                <p><b>Line 2:</b> <code>&lt;ul&gt;</code> starts an <input type="text" class="gap" data-answer="unordered" aria-label="Gap 2" autocomplete="off" spellcheck="false"> list, so the browser shows bullet points.</p>
+                <p><b>Line 3:</b> <code>&lt;li&gt;</code> is one list <input type="text" class="gap" data-answer="item" aria-label="Gap 3" autocomplete="off" spellcheck="false">. Inside it, <code>&lt;a&gt;</code> makes a <input type="text" class="gap" data-answer="link" aria-label="Gap 4" autocomplete="off" spellcheck="false">, and <code>href</code> says <input type="text" class="gap" data-answer="where" aria-label="Gap 5" autocomplete="off" spellcheck="false"> it goes. “GitHub” is the link <input type="text" class="gap" data-answer="text" aria-label="Gap 6" autocomplete="off" spellcheck="false">: the word that people click.</p>
+                <p><b>Lines 3 and 4</b> start with two spaces, because they are inside the list. This is called <input type="text" class="gap" data-answer="indentation" aria-label="Gap 7" autocomplete="off" spellcheck="false">.</p>
+                <p><b>Line 5:</b> <code>&lt;/ul&gt;</code> <input type="text" class="gap" data-answer="closes|ends" aria-label="Gap 8" autocomplete="off" spellcheck="false"> the list.</p>
+                <p class="btnrow"><button type="button" class="btn small gap-check">Check my answers</button></p>
+                <p class="quiet gap-status" role="status"></p>
+              </div>
+              <details class="reveal">
+                <summary>Show the answers</summary>
+                <p>1 heading, 2 unordered, 3 item, 4 link, 5 where, 6 text, 7 indentation, 8 closes.</p>
+                <p>The extra word is <b>ordered</b>: an ordered list starts with <code>&lt;ol&gt;</code>, and the browser shows numbers.</p>
+              </details>
+              <p class="prompt-head"><b>Now with your own code.</b> Copy this prompt into your Copilot chat. Copilot makes a gap-fill like this one about its own code.</p>
+              <pre class="code prompt" id="look2-try-2">Take the code that you gave me in this chat. Explain it line by line, one short sentence for each line, but leave out one important word in each sentence and write ____ instead. Under the sentences, list the missing words in a mixed-up order. Wait for my answers, then check them.</pre>
+              <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-try-2">Copy the prompt</button></p>
+            </details>
+            <details class="reveal try">
+              <summary>Activity 3: Explain it yourself</summary>
+              <p>Now you are the teacher. Explain this code to a classmate, one short sentence for each line. Use your own words.</p>
+<pre class="code softwrap"><code>&lt;figure&gt;
+  &lt;img src="images/sofa.jpg" alt="Somebody asleep on a sofa under a striped blanket"&gt;
+  &lt;figcaption&gt;My revision plan, day 3.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+              <div class="field">
+                <label for="look2-explain">My explanation, line by line</label>
+                <textarea class="notes" id="look2-explain" data-save="look2-explain"></textarea>
+              </div>
+              <details class="reveal">
+                <summary>Compare with a model answer</summary>
+                <ol>
+                  <li><b>Line 1:</b> <code>&lt;figure&gt;</code> starts a frame that holds the picture and its caption together. The frame itself is not shown on the page.</li>
+                  <li><b>Line 2:</b> <code>&lt;img&gt;</code> shows the picture sofa.jpg from the folder images. The alt text takes the place of the picture for people who cannot see it. The line is moved in, because it is inside the figure.</li>
+                  <li><b>Line 3:</b> <code>&lt;figcaption&gt;</code> is the caption: the words “My revision plan, day 3.” appear under the picture.</li>
+                  <li><b>Line 4:</b> <code>&lt;/figure&gt;</code> closes the frame.</li>
+                </ol>
+                <p>Your words can be different, and that is the point. If you can say it in your own words, you understand it.</p>
+              </details>
+              <p class="prompt-head"><b>Now with your own code.</b> Explain the code from your Copilot chat in the same way. Then copy this prompt into the same chat, and put your explanation where the square brackets are.</p>
+              <pre class="code prompt" id="look2-try-3">I will explain the code that you gave me in this chat, line by line, in my own words. Check my explanation. For each line, tell me if it is right. If it is not, explain my mistake in simple English. Do not rewrite the code, and do not give me new code.
+My explanation: [paste your explanation here]</pre>
+              <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-try-3">Copy the prompt</button></p>
+            </details>
+          </li>
+          <!-- Her words for the rule about marked work (her note of 27 November, 22:36). -->
+          <li><b>In your future studies, you have to ask every lecturer about their policy on AI and coding, and stick to it.</b> The policy can be different in every unit, and even in every assignment, so read the brief too. If AI is allowed, say that you used it, and how. You are responsible for what you hand in.</li>
         </ul>
       </details>
     </div>
     <div class="block" data-label="Reflect">
+      <!-- The three portfolios are named again, because the Copilot block now comes between them and this question;
+           and a second question about Copilot (her notes of 27 November, 22:37). -->
       <div class="field read">
-        <label for="r-s-look-2">Which of the three people would you invite to an interview first? Give one reason.</label>
+        <label for="r-s-look-2">Think back to the three portfolios at the start of this mission: A, the practice portfolio; B, the student; C, the engineer. If you were the employer, which person would you invite to an interview first? Give one reason.</label>
         <textarea class="notes" id="r-s-look-2" data-save="r-s-look-2"></textarea>
+      </div>
+      <div class="field read">
+        <label for="r-s-look-2-ai">Now think about Copilot. Which prompt helped you most, and why? Then choose one line of code from your chat and explain it in your own words.</label>
+        <textarea class="notes" id="r-s-look-2-ai" data-save="r-s-look-2-ai"></textarea>
       </div>
     </div>
   </div>
@@ -749,6 +883,19 @@ I have [1 day / 1 week] to add this to my own page.</pre>
         <div class="site"><p class="label">Place 1</p><h3>The title</h3><p>The words between <code>&lt;title&gt;</code> and <code>&lt;/title&gt;</code>. They are the name of the page. You see them on the browser tab, not on the page. The big “Robin Vale” on the page is <b>not</b> the title. It is a heading, and you write it between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code> (Place 2).</p></div>
         <div class="site"><p class="label">Place 2</p><h3>The body</h3><p>Everything between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code>. This is the page that visitors see. Here it is one heading, the big “Robin Vale”, and one paragraph.</p></div>
       </div>
+      <!-- Look closely: html, head and body in red pen, like the list tags in Mission 05 (her note of 27 November, 22:41: more places with this kind of explanation). -->
+      <p class="read"><b>Look closely.</b> The skeleton has two big parts, the head and the body. Each one has a tag at its start and a tag at its end, and the whole page sits between <code>&lt;html&gt;</code> and <code>&lt;/html&gt;</code>. These tags are easy to miss, so here is the same code again, with them in red.</p>
+<pre class="code marked read"><code>&lt;!DOCTYPE html&gt;
+<span class="hl-red">&lt;html lang="en"&gt;</span><span class="pen-note">The page starts.<span class="pn-more">en = English</span></span>
+  <span class="hl-red">&lt;head&gt;</span><span class="pen-note">The head starts.<span class="pn-more">Facts about the page, not on the page.</span></span>
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;<span class="hl">Robin Vale | Portfolio</span>&lt;/title&gt;<span class="pen-note">Place 1</span>
+  <span class="hl-red">&lt;/head&gt;</span><span class="pen-note">The head ends.</span>
+  <span class="hl-red">&lt;body&gt;</span><span class="pen-note">The body starts.<span class="pn-more">Everything that people see.</span></span>
+    <span class="hl">&lt;h1&gt;Robin Vale&lt;/h1&gt;</span><span class="pen-note">Place 2</span>
+    <span class="hl">&lt;p&gt;I study computer science.&lt;/p&gt;</span>
+  <span class="hl-red">&lt;/body&gt;</span><span class="pen-note">The body ends.</span>
+<span class="hl-red">&lt;/html&gt;</span><span class="pen-note">The page ends.</span></code></pre>
       <p class="read">Later you will make files of your own. Start each one with the skeleton. This button copies it, with the two places empty.</p>
 <pre id="skeleton-text" hidden>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -763,8 +910,44 @@ I have [1 day / 1 week] to add this to my own page.</pre>
       <p class="btnrow read"><button type="button" class="btn small" data-copy-text="skeleton-text">Copy the skeleton</button></p>
       <!-- The same skeleton in VS Code, with Emmet (her note of 27 November, 20:18). Taught again in VS Code on your own computer (s-vsc-3)
            and on cheat sheet 3. Checked on 27 November 2026: Emmet is built into VS Code; in an .html file, ! appears in the list of
-           suggestions, and Enter (or Tab) writes the skeleton. Its skeleton has a viewport line and the title Document. -->
-      <div class="callout tip read"><b>Later, in VS Code: let it write the skeleton</b><p>When you start working in VS Code, you will not need to copy the skeleton. Open an empty file whose name ends in <code>.html</code> and type <code>!</code> (an exclamation mark). A small list appears. Press Tab or Enter, and VS Code writes the whole skeleton for you. This helper is called Emmet.</p><p>Two small differences. Its skeleton has an extra line with the word <code>viewport</code>, which helps the page fit on a phone: leave it. And its title says <code>Document</code>: change it to the name of your page. You will try it in Mission&nbsp;23, <a href="#s-vsc-3">VS Code on your own computer</a>.</p></div>
+           suggestions, and Enter (or Tab) writes the skeleton. The paragraph about the two small differences (viewport, Document) is gone,
+           and in its place a drawing of exactly what VS Code shows, with no details about the differences (her notes of 27 November,
+           22:38 and 22:39, with her screenshot of VS Code). -->
+      <div class="callout tip read"><b>Later, in VS Code: let it write the skeleton</b>
+        <p>When you start working in VS Code, you will not need to copy the skeleton. VS Code can write it for you, with a helper called Emmet. This is what you will see:</p>
+        <figure class="vsx" role="img" aria-label="VS Code with a file called index.html. On line 1 is an exclamation mark. A red note says: you type it. Under it is a small list with two lines, an exclamation mark, which is chosen, and three exclamation marks. A red note says: press Enter or Tab. Beside the list, a box called Emmet Abbreviation shows the skeleton of a page: DOCTYPE html, html lang en, head, meta charset UTF-8, meta viewport, title Document, the end of the head, body, the end of the body and the end of html.">
+          <div class="vsx-win" aria-hidden="true">
+            <div class="vs-tabs"><span class="on">index.html</span></div>
+            <div class="vsx-line"><span class="n">1</span><span>!</span><span class="vsx-caret"></span><span class="pen-note">You type !</span></div>
+            <div class="vsx-pop">
+              <div class="vsx-sug">
+                <div class="hit"><svg viewBox="0 0 24 24"><path d="M14.5 3.5a5 5 0 0 0-4.9 6.4L3.5 16l4.5 4.5 6.1-6.1a5 5 0 0 0 6.4-4.9l-3 3-3.5-.9-.9-3.5z"/></svg>!</div>
+                <div><svg viewBox="0 0 24 24"><path d="M14.5 3.5a5 5 0 0 0-4.9 6.4L3.5 16l4.5 4.5 6.1-6.1a5 5 0 0 0 6.4-4.9l-3 3-3.5-.9-.9-3.5z"/></svg>!!!</div>
+                <span class="pen-note up">Press Enter or Tab</span>
+              </div>
+              <div class="vsx-prev">
+                <p class="vsx-prev-top"><span>Emmet Abbreviation</span><span>✕</span></p>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    <span class="vsx-caret"></span>
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+              </div>
+            </div>
+          </div>
+        </figure>
+        <ol>
+          <li>Open an empty file whose name ends in <code>.html</code>, and type <code>!</code> (an exclamation mark).</li>
+          <li>A small list appears, with <code>!</code> at the top. Beside it, the box <b>Emmet Abbreviation</b> shows the skeleton that VS Code is ready to write.</li>
+          <li>Press Enter or Tab. The <code>!</code> turns into the whole skeleton.</li>
+        </ol>
+      </div>
       <div class="quiz read">
         <fieldset class="q ask" data-right="1">
           <legend>Where do you see the words of the <code>&lt;title&gt;</code>?</legend>
@@ -848,6 +1031,14 @@ I have [1 day / 1 week] to add this to my own page.</pre>
 “tidy the room” does not mean “hide everything under the bed”.&lt;/p&gt;</code></pre>
         <div class="look" data-look="the big heading Robin Vale, the smaller heading About me, and two paragraphs of normal text."></div>
       </div>
+      <!-- Look closely: one element taken apart, and one paragraph on two lines, in red pen (her note of 27 November, 22:41: more places with this kind of explanation). -->
+      <p class="read"><b>Look closely.</b> Each heading and each paragraph has three parts: an opening tag, the words, and a closing tag. Together they make one element. Here is the first line of the code, taken apart. In your own code it stays on one line.</p>
+<pre class="code marked read"><code><span class="hl-red">&lt;h1&gt;</span><span class="pen-note">The opening tag: the heading starts.</span>
+Robin Vale<span class="pen-note">The words that people see.</span>
+<span class="hl-red">&lt;/h1&gt;</span><span class="pen-note">The closing tag: the heading ends.<span class="pn-more">It has a slash: /</span></span></code></pre>
+      <p class="read">One more thing. In the code, the second paragraph is on two lines, but on the page it is one paragraph. Pressing Enter in the code does not start a new paragraph. Only a new <code>&lt;p&gt;</code> does.</p>
+<pre class="code marked read"><code><span class="hl-red">&lt;p&gt;</span>I am learning HTML, CSS and how to explain to my robot that<span class="pen-note">One paragraph …</span>
+“tidy the room” does not mean “hide everything under the bed”.<span class="hl-red">&lt;/p&gt;</span><span class="pen-note">… on two lines.</span></code></pre>
       <p class="read"><b>Think:</b> what happens if a page has three <code>&lt;h1&gt;</code> headings?</p>
       <details class="reveal read">
         <summary>Check your answer</summary>
@@ -917,7 +1108,7 @@ I have [1 day / 1 week] to add this to my own page.</pre>
            the <ul> and <ol> around them are easy to miss. So the code comes again, with those four tags in red (span.hl-red)
            and a red note beside each one (span.pen-note). -->
       <p class="read"><b>Look closely.</b> On the page you see the words of the <code>&lt;li&gt;</code> lines. But each list also has one tag at its start and one tag at its end. They are easy to miss, so here is the same code again, with them in red.</p>
-      <pre class="code listmap read"><code>&lt;h2&gt;Skills&lt;/h2&gt;
+      <pre class="code marked read"><code>&lt;h2&gt;Skills&lt;/h2&gt;
 <span class="hl-red">&lt;ul&gt;</span><span class="pen-note">The list starts.<span class="pn-more">ul = unordered list</span></span>
   &lt;li&gt;HTML&lt;/li&gt;
   &lt;li&gt;CSS&lt;/li&gt;
@@ -1018,6 +1209,13 @@ I have [1 day / 1 week] to add this to my own page.</pre>
 <pre class="code"><code><span class="hl-red">&lt;a</span> <span class="hl">href="https://github.com/robin-vale"</span><span class="hl-red">&gt;</span>My GitHub profile<span class="hl-red">&lt;/a&gt;</span></code></pre>
         <div class="look" data-look="a blue underlined link with the words My GitHub profile."></div>
       </div>
+      <!-- Look closely: the link taken apart, in red pen (her note of 27 November, 22:41: more places with this kind of explanation). -->
+      <p class="read"><b>Look closely.</b> Here is the same link, taken apart, one piece on each line. In your own code, keep it on one line.</p>
+<pre class="code marked read"><code><span class="hl-red">&lt;a</span><span class="pen-note">The link starts.<span class="pn-more">a = anchor</span></span>
+<span class="hl">href="https://github.com/robin-vale"</span><span class="pen-note">Where it goes.<span class="pn-more">href = hypertext reference</span></span>
+<span class="hl-red">&gt;</span><span class="pen-note">The opening tag ends.</span>
+My GitHub profile<span class="pen-note">The words that people click.</span>
+<span class="hl-red">&lt;/a&gt;</span><span class="pen-note">The link ends.</span></code></pre>
       <!-- The tags first, then href and what it stands for (her note of 27 November, 21:57). The tags of the link are in red in the code above.
            Checked in Chrome on 27 November 2026: with no </a>, the words in the next paragraph become a link to the same address. -->
       <ul class="read">
@@ -1038,12 +1236,15 @@ I have [1 day / 1 week] to add this to my own page.</pre>
     </div>
     <div class="block" data-label="Practise">
       <!-- No accounts yet (her note of 27 November, 21:59): where the LinkedIn instructions are, and setting up Beds Career Builder.
-           GitHub stays in Mission 15. A third, Handshake, the University's jobs website. Checked on beds.ac.uk on 27 November 2026:
-           Beds Career Builder is reached from the careers advice page; log in with the University of Bedfordshire button, the student ID
-           and university details; problems to careers@beds.ac.uk with the student ID. Current students already have a Handshake account:
-           sign in with the usual student details and complete the profile. Swap in her direct link to Beds Career Builder when she sends it. -->
+           GitHub stays in Mission 15. The third part was Handshake; she thinks the University does not use it, so it is now the
+           Careers Podcast and the Recruitment Agency (her note and screenshots of 27 November, 22:47). From her screenshots: the red button
+           "Beds Career Builder - Career Development Hub" opens a box with "Students sign in here using your student ID number and usual
+           student password"; the Careers Podcast has six episodes, one every Monday from 9 November to 14 December, on Spotify.
+           Checked on beds.ac.uk on 27 November 2026: the page with the red buttons and the card Career Powered Recruitment Agency is
+           /careers/current-vacancies/; problems with Beds Career Builder to careers@beds.ac.uk with the student ID.
+           Swap in direct links to Beds Career Builder and to the podcast page when she sends them. -->
       <p class="read">Add a link to your GitHub profile and a link to your LinkedIn profile. No accounts yet? Use the addresses you plan to have, such as <code>https://github.com/your-name</code>. You will make your GitHub account in Mission&nbsp;15, <a href="#s-git-1">Make your GitHub account</a>.</p>
-      <p class="read">Two more accounts are worth having soon, and one you have already. Open each one to see how.</p>
+      <p class="read">Two more accounts are worth having soon. Open each part to see how, and the third one for more help from the University's Careers service.</p>
       <details class="reveal read">
         <summary>LinkedIn: where the instructions are</summary>
         <p>You will make your LinkedIn profile step by step in Mission&nbsp;32, <a href="#s-net-1">LinkedIn: your profile</a>. If you want to start before that, the University's Careers and Employability Service has a <a href="https://www.beds.ac.uk/careers/cvs-and-applications/linkedin">page about LinkedIn for students</a>, and the careers team can help you with your profile in an appointment.</p>
@@ -1051,18 +1252,21 @@ I have [1 day / 1 week] to add this to my own page.</pre>
       </details>
       <details class="reveal read">
         <summary>Beds Career Builder: set up your account</summary>
-        <p>Beds Career Builder is the University's careers website. It has a CV builder, quizzes that help you find the kind of job that suits you, and advice on applications and interviews.</p>
+        <p>Beds Career Builder is the University's careers hub. You can search for part-time jobs and placements, book a place at employer events, book an appointment with a careers consultant, build your CV, and practise interview questions.</p>
         <ol class="steps">
-          <li>Open the University's page <a href="https://beds.ac.uk/careers/cvs-and-applications/advice">Get advice from the Careers and Employability Service</a> and follow the link to Beds Career Builder.</li>
-          <li>Choose the button <b class="ui">University of Bedfordshire</b>.</li>
-          <li>Log in with your student ID and your university details.</li>
-          <li>Look around: try one quiz, or start your CV.</li>
+          <li>Open the University's <a href="https://www.beds.ac.uk/careers/current-vacancies/">Careers page</a> and click the red button <b class="ui">Beds Career Builder - Career Development Hub</b>.</li>
+          <li>A box opens. Click <b>Students sign in here</b>, and sign in with your student ID number and your usual student password.</li>
+          <li>Try one thing: start your CV with the <b>CV Builder Tool</b>, or answer a few questions in the <b>Interview Simulator</b>.</li>
         </ol>
         <p>It does not work? Email <code>careers@beds.ac.uk</code> with a short description of the problem and your student ID number.</p>
       </details>
       <details class="reveal read">
-        <summary>Handshake: jobs and internships (you already have an account)</summary>
-        <p>Handshake is the University's website for part-time jobs, internships, volunteering and graduate jobs. Every current student already has an account: sign in with your usual student details and complete your profile. Start at the University's page <a href="https://beds.ac.uk/careers/jobs">Find a Job</a>.</p>
+        <summary>More from the Careers service: a podcast and a recruitment agency</summary>
+        <p>Both are on the same <a href="https://www.beds.ac.uk/careers/current-vacancies/">Careers page</a>.</p>
+        <ul>
+          <li><b>The Careers Podcast</b> (red button <b class="ui">Careers Podcast</b>). The Career Conversation Podcast: honest conversations with the University's careers consultants. Six episodes, a new one every Monday from 9 November to 14 December, about half an hour each, on Spotify. The topics: AI and careers, minority ethnic students and careers, further study, gaining work experience, self-employment, and disability and careers. Start with episode 1, <b>AI &amp; Careers</b>: how AI is changing jobs and the skills that employers want, and how to use AI responsibly.</li>
+          <li><b>Career Powered Recruitment Agency</b> (a card further down the page). The University's own recruitment agency for its students and graduates. It helps you find jobs, internships, placements and volunteering, and helps you with your applications.</li>
+        </ul>
       </details>
       <div class="pg full" data-pg="html-links" data-tabs="html">
 <textarea class="pg-src" data-lang="html" hidden>
@@ -1092,18 +1296,29 @@ I have [1 day / 1 week] to add this to my own page.</pre>
   <div class="wrap">
     <div class="block" data-label="Look">
       <div class="codelook">
-<pre class="code"><code>&lt;img src="images/library.jpg" alt="Tall shelves full of books in a library"&gt;
+<pre class="code marked"><code>&lt;img src="images/library.jpg" alt="Tall shelves full of books in a library"&gt;
 
-<span class="cm">&lt;!-- The library: where you tell everyone you are.
-     Your tutor looks for you there every day,
-     three times a day. So far: lots of books. --&gt;</span></code></pre>
+<span class="hl-red">&lt;!--</span><span class="pen-note">A comment starts.<span class="pn-more">The browser does not show it.</span></span>
+<span class="cm">  The library: where you say you study every day.
+  Your tutor went to find you. Every day. Three times a day.
+  Found: 38,412 books and one very quiet librarian.
+  Not found: you.
+  The librarian and your tutor are now good friends.</span>
+<span class="hl-red">--&gt;</span><span class="pen-note">The comment ends.</span></code></pre>
         <div class="look" data-look="a picture of tall shelves full of books."></div>
       </div>
+      <!-- Look closely: the image taken apart, in red pen (her note of 27 November, 22:41: more places with this kind of explanation). -->
+      <p class="read"><b>Look closely.</b> Here is the image line, taken apart, one piece on each line. In your own code, keep it on one line.</p>
+<pre class="code marked read"><code><span class="hl-red">&lt;img</span><span class="pen-note">The image starts.<span class="pn-more">img = image</span></span>
+<span class="hl">src="images/library.jpg"</span><span class="pen-note">Which file to show.<span class="pn-more">src = source</span></span>
+<span class="hl">alt="Tall shelves full of books in a library"</span><span class="pen-note">Words instead of the picture.<span class="pn-more">alt = alternative text</span></span>
+<span class="hl-red">&gt;</span><span class="pen-note">The image ends here.<span class="pn-more">No &lt;/img&gt;</span></span></code></pre>
       <ul class="read">
-        <!-- What src and alt stand for, and a comment with a joke in the space under the tag (her notes of 27 November, 22:01). -->
+        <!-- What src and alt stand for, and a comment with a joke in the space under the tag (her notes of 27 November, 22:01).
+             The comment is now marked in red pen and explained, and the joke is clearer (her note of 27 November, 22:48). -->
         <li><code>src</code> is short for <b>source</b>: where the picture comes from. It says which file to show. <code>images/library.jpg</code> means “the file library.jpg in the folder images”.</li>
         <li><code>alt</code> is short for <b>alternative text</b>: words that take the place of the picture. They are for people who cannot see the picture, and the browser also shows them when the file does not load.</li>
-        <li>The lines between <code>&lt;!--</code> and <code>--&gt;</code> are a <b>comment</b>: a note for people who read the code. The browser does not show it. This one is a joke. Mostly.</li>
+        <li>The grey lines between <code>&lt;!--</code> and <code>--&gt;</code> (in red) are a <b>comment</b>. A comment is a note for people who read the code: you next week, your classmates, your tutor. The browser does not show it on the page. Look at the picture “In the browser”: the joke is not there. Developers use comments to explain their code. This one is a joke. Mostly.</li>
         <li>An image has no closing tag. Compare it with a paragraph.</li>
       </ul>
       <div class="tablewrap read"><table class="tagrow">
@@ -1153,24 +1368,29 @@ I have [1 day / 1 week] to add this to my own page.</pre>
       <p class="read">In the practice below, the caption is an extra goal. Add it when your picture works.</p>
     </div>
     <div class="block" data-label="Practise">
-      <!-- Funnier pictures (her note of 27 November, 22:04): the library is no longer first. cat.jpg and sofa.jpg are drawn in js/playground.js. -->
-      <p class="read">Three picture files are ready for you on this site: <code>images/cat.jpg</code>, <code>images/library.jpg</code> and <code>images/sofa.jpg</code>. Put one of them above the paragraph. Then try the other two, and be honest: which one shows where you really study?</p>
-      <div class="pg full" data-pg="html-image" data-tabs="html">
+      <!-- Three funny places to study (her notes of 27 November, 22:04 and 22:52): the bus, the kitchen (an ironing board as a desk) and the sofa.
+           The library and the cat are not in this list any more: the cat is used earlier, and the library stays in the Look, with its joke.
+           All the pictures are drawn in js/playground.js. The result is under the code and taller, and the lines are short,
+           so the whole page shows without scrolling (her note of 27 November, 22:52). -->
+      <p class="read">Three picture files are ready for you on this site: <code>images/bus.jpg</code>, <code>images/kitchen.jpg</code> and <code>images/sofa.jpg</code>. Put one of them above the paragraph. Then try the other two, and be honest: which one shows where you really study?</p>
+      <div class="pg full stack" data-pg="html-image" data-tabs="html">
 <textarea class="pg-src" data-lang="html" hidden>
 <h2>Where I study</h2>
 
-<p>This is where I do my best thinking. Sometimes also my best sleeping.</p>
+<p>This is where I do my best thinking.
+My tutor thinks I am in the library.</p>
 </textarea>
 <textarea class="pg-ans" data-lang="html" hidden>
 <h2>Where I study</h2>
 <figure>
-  <img src="images/library.jpg" alt="Tall shelves full of books in a library">
-  <figcaption>The quiet floor of the library</figcaption>
+  <img src="images/kitchen.jpg" alt="A laptop on an ironing board in a small kitchen">
+  <figcaption>My standing desk</figcaption>
 </figure>
-<p>This is where I do my best thinking. Sometimes also my best sleeping.</p>
+<p>This is where I do my best thinking.
+My tutor thinks I am in the library.</p>
 </textarea>
       </div>
-      <div class="callout tip read"><b>Now break it</b><p>Change <code>library.jpg</code> to <code>Library.jpg</code>. What happens? On GitHub a capital letter is a different letter. Most broken pictures on student websites come from this.</p></div>
+      <div class="callout tip read"><b>Now break it</b><p>Change <code>kitchen.jpg</code> to <code>Kitchen.jpg</code>. What happens? On GitHub a capital letter is a different letter. Most broken pictures on student websites come from this.</p></div>
     </div>
     <div class="block" data-label="Key words">
       <dl class="keywords">
@@ -1322,7 +1542,9 @@ I have [1 day / 1 week] to add this to my own page.</pre>
             <button type="button">h1 must be in capital letters</button>
             <button type="button">A heading cannot have two words</button>
           </div>
-          <p class="q-why" hidden>A closing tag has a slash. Without it, the browser thinks a second heading starts.</p>
+          <div class="q-why" hidden><p>A closing tag has a slash. Without it, the browser thinks a second heading starts.</p>
+            <p class="fix-head">The fix, in red:</p>
+<pre class="code marked"><code>&lt;h1&gt;My portfolio<span class="hl-red">&lt;/h1&gt;</span><span class="pen-note">The slash.</span></code></pre></div>
         </fieldset>
         <fieldset class="q" data-right="2">
           <legend>2</legend>
@@ -1332,7 +1554,9 @@ I have [1 day / 1 week] to add this to my own page.</pre>
             <button type="button">The name of the attribute is spelt wrong</button>
             <button type="button">The link text is too long</button>
           </div>
-          <p class="q-why" hidden>It must be href. The browser ignores an attribute that it does not know, so the link goes nowhere. There is no error message. Just silence.</p>
+          <div class="q-why" hidden><p>It must be href. The browser ignores an attribute that it does not know, so the link goes nowhere. There is no error message. Just silence.</p>
+            <p class="fix-head">The fix, in red:</p>
+<pre class="code marked"><code>&lt;a <span class="hl-red">href</span>="https://github.com/robin-vale"&gt;My GitHub profile&lt;/a&gt;<span class="pen-note">href, not herf</span></code></pre></div>
         </fieldset>
         <fieldset class="q" data-right="3">
           <legend>3</legend>
@@ -1342,7 +1566,9 @@ I have [1 day / 1 week] to add this to my own page.</pre>
             <button type="button">The file must be a .png</button>
             <button type="button">The alt text is missing</button>
           </div>
-          <p class="q-why" hidden>Every image needs alt text. Without it, a person who uses a screen reader hears only the file name.</p>
+          <div class="q-why" hidden><p>Every image needs alt text. Without it, a person who uses a screen reader hears only the file name.</p>
+            <p class="fix-head">The fix, in red:</p>
+<pre class="code marked"><code>&lt;img src="images/me.jpg" <span class="hl-red">alt="Robin Vale at a laptop"</span>&gt;<span class="pen-note">Now with alt text.</span></code></pre></div>
         </fieldset>
         <fieldset class="q" data-right="1">
           <legend>4</legend>
@@ -1355,7 +1581,12 @@ I have [1 day / 1 week] to add this to my own page.</pre>
             <button type="button">A list needs three items</button>
             <button type="button">&lt;ul&gt; must be &lt;ol&gt;</button>
           </div>
-          <p class="q-why" hidden>Inside a list, each item is an &lt;li&gt; element.</p>
+          <div class="q-why" hidden><p>Inside a list, each item is an &lt;li&gt; element.</p>
+            <p class="fix-head">The fix, in red:</p>
+<pre class="code marked"><code>&lt;ul&gt;
+  <span class="hl-red">&lt;li&gt;</span>HTML<span class="hl-red">&lt;/li&gt;</span><span class="pen-note">li, not p</span>
+  <span class="hl-red">&lt;li&gt;</span>CSS<span class="hl-red">&lt;/li&gt;</span>
+&lt;/ul&gt;</code></pre></div>
         </fieldset>
         <fieldset class="q" data-right="2">
           <legend>5</legend>
@@ -1368,7 +1599,14 @@ I have [1 day / 1 week] to add this to my own page.</pre>
             <button type="button">&lt;title&gt; belongs in &lt;head&gt;</button>
             <button type="button">&lt;h1&gt; must come first</button>
           </div>
-          <p class="q-why" hidden>The title is information about the page, so it goes in the head. The body is for things that visitors see.</p>
+          <div class="q-why" hidden><p>The title is information about the page, so it goes in the head. The body is for things that visitors see.</p>
+            <p class="fix-head">The fix, in red:</p>
+<pre class="code marked"><code><span class="hl-red">&lt;head&gt;</span>
+  &lt;title&gt;Robin Vale&lt;/title&gt;<span class="pen-note">Now in the head.</span>
+<span class="hl-red">&lt;/head&gt;</span>
+&lt;body&gt;
+  &lt;h1&gt;Robin Vale&lt;/h1&gt;
+&lt;/body&gt;</code></pre></div>
         </fieldset>
       </div>
     </div>
@@ -1398,6 +1636,11 @@ I have [1 day / 1 week] to add this to my own page.</pre>
           <tr><td>value</td><td><code>navy</code></td><td>What do we change it to?</td></tr>
         </tbody>
       </table></div>
+      <!-- Look closely: the four small symbols of a rule in red pen (her note of 27 November, 22:41: more places with this kind of explanation). -->
+      <p class="read"><b>Look closely.</b> Around the three parts are four small symbols. They are easy to miss, so here is the same rule again, with them in red.</p>
+<pre class="code marked read"><code>h1 <span class="hl-red">{</span><span class="pen-note">The rule starts.<span class="pn-more">a curly bracket</span></span>
+  color<span class="hl-red">:</span> navy<span class="hl-red">;</span><span class="pen-note">A colon in the middle, a semicolon at the end.</span>
+<span class="hl-red">}</span><span class="pen-note">The rule ends.<span class="pn-more">a curly bracket</span></span></code></pre>
       <p class="read">The rule opens with a curly bracket <code>{</code> and closes with a curly bracket <code>}</code>. A colon <code>:</code> stands between the property and the value. Each line inside ends with a semicolon <code>;</code>. Most CSS mistakes are a missing semicolon or a missing curly bracket.</p>
       <p class="read">CSS lives in its own file, <code>style.css</code>. One line in the <code>&lt;head&gt;</code> of the HTML file, <code>index.html</code>, connects the two.</p>
       <p class="code-file">index.html</p>
@@ -1500,8 +1743,9 @@ p {
     <div class="block" data-label="Look">
       <p class="read">You can write a colour as a name, such as <code>navy</code>, or as a hex code, such as <code>#14213d</code>. A hex code is a recipe: two digits of red, two of green, two of blue.</p>
       <p class="code-file">style.css</p>
-<pre class="code read"><code>body {
-  font-family: Arial, sans-serif;
+<!-- The first choice and the spare, in red pen (her note of 27 November, 22:41: more places with this kind of explanation). -->
+<pre class="code marked read"><code>body {
+  font-family: <span class="hl">Arial</span>, <span class="hl">sans-serif</span>;<span class="pen-note">First choice, then a spare.</span>
 }</code></pre>
       <p class="read">The second font is a spare. A computer with no Arial uses any sans-serif font it has.</p>
       <p class="read"><b>Think:</b> why is this a bad idea?</p>
@@ -1686,10 +1930,11 @@ margin-left: 24px;</code>
       <p class="read">Sometimes you want one style on some elements, but not on all of them. Give those elements a class. A class is a label.</p>
       <p class="read">You write it in two places. First you put the label on the element, in the HTML file.</p>
       <p class="code-file">index.html</p>
-<pre class="code read"><code>&lt;section <span class="hl">class="card"</span>&gt; … &lt;/section&gt;</code></pre>
+<!-- No dot in the HTML, a dot in the CSS, in red pen (her note of 27 November, 22:41: more places with this kind of explanation). -->
+<pre class="code marked read"><code>&lt;section <span class="hl">class="card"</span>&gt; … &lt;/section&gt;<span class="pen-note">The label. No dot here.</span></code></pre>
       <p class="read">Then you say what the label means, in the CSS file.</p>
       <p class="code-file">style.css</p>
-<pre class="code read"><code><span class="hl">.card</span> {
+<pre class="code marked read"><code><span class="hl"><span class="hl-red">.</span>card</span> {<span class="pen-note">The same label, with a dot.<span class="pn-more">The dot means: a class.</span></span>
   background-color: white;
   padding: 16px;
 }</code></pre>
@@ -3208,7 +3453,7 @@ git config --global user.email "robin@example.com"</code></pre>
     </div>
     <div class="block" data-label="Where to look">
       <div class="cards3 full">
-        <div class="site"><h3>Your university</h3><p>The careers team lists events on its <a href="https://www.beds.ac.uk/student-experience/studying-at-bedfordshire/student-services/careers/whats-on/">What's on page</a> and on Handshake. Sign in to Handshake with your student login.</p></div>
+        <div class="site"><h3>Your university</h3><p>The careers team lists events on its <a href="https://www.beds.ac.uk/student-experience/studying-at-bedfordshire/student-services/careers/whats-on/">What's on page</a> and in Beds Career Builder, where you can book a place at employer events. Sign in there with your student ID number and your usual student password.</p></div>
         <div class="site"><h3>BCS local branch</h3><p>The <a href="https://bbn.bcs.org/">Beds, Bucks and Northants branch</a> runs talks about computing. Almost all are free and open to everyone.</p></div>
         <div class="site"><h3>IET local network</h3><p>The <a href="https://localevents.theiet.org/network/bedsherts">Bedfordshire and Hertfordshire network</a> runs engineering talks and visits. They are open to the public and most are free.</p></div>
         <div class="site"><h3>Meetup</h3><p>Search <a href="https://www.meetup.com/">meetup.com</a> for your town. One example is the <a href="https://www.meetup.com/luton-dev-code/">Luton Dev and Code Meetup</a>, which runs online sessions for people who are learning to code.</p></div>

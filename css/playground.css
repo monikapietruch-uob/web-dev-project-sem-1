@@ -6,6 +6,11 @@
 .pg{--behind:var(--card);border:1px solid var(--track);background:var(--card);margin:0 0 1em}
 .pg-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:340px}
 @media (max-width:860px){.pg-grid{grid-template-columns:minmax(0,1fr)}}
+/* class="pg stack": the result under the code, and taller, for pictures that need room (Images). The code gets the whole width too. */
+.pg.stack .pg-grid{grid-template-columns:minmax(0,1fr)}
+.pg.stack .pg-out{border-left:0;border-top:1px solid var(--track)}
+.pg.stack .pg-pane,.pg.stack .pg-area{min-height:230px}
+.pg.stack .pg-frame{min-height:520px}
 .pg-edit{display:flex;flex-direction:column;min-width:0;background:var(--code-bg)}
 .pg-tabs{display:flex;gap:2px;background:var(--card);padding:8px 8px 0;flex-wrap:wrap}
 .pg-tab{font:700 14px var(--f-code);color:var(--dim);background:transparent;border:0;border-top:2px solid transparent;padding:8px 12px;cursor:pointer}

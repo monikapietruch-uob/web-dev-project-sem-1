@@ -66,13 +66,22 @@ a.strip-end:hover{color:var(--ink)}
 .callout > b:first-child{display:block;font:700 15px/1.3 var(--f-display);letter-spacing:.12em;text-transform:uppercase;color:var(--cc,var(--ink));margin-bottom:4px}
 .callout > :last-child{margin-bottom:0}
 .callout.tip{--cc:var(--ok)} .callout.careful{--cc:var(--warn)} .callout.public{--cc:var(--bad)}
+.callout.rule{--cc:var(--mark);border:3px solid var(--mark);padding:18px 22px}   /* the one rule that must not be missed: a red frame all round (Learn it with Copilot) */
+.callout.rule > b:first-child{font-size:18px}
+.callout.rule .slip-pair ul{margin:0;padding-left:1.2em}
+.prompt-head{margin:16px 0 6px}   /* the name of a prompt, before its code box (Learn it with Copilot: the steps and the three activities) */
 pre.code{background:var(--code-bg);color:var(--code-ink);border:1px solid var(--line);padding:14px 16px;overflow-x:auto;font-size:16px;line-height:1.5;margin:0 0 1em;tab-size:2}
 pre.code code{background:none;padding:0;font-size:inherit;color:inherit}
 pre.code .hl{color:var(--amber)}
 pre.code .hl-red{color:var(--mark);font-weight:700}   /* a tag in red pen: one that is easy to miss (Lists, Links) */
-pre.code.listmap{white-space:pre-wrap;overflow-wrap:anywhere}   /* code with red notes beside it: it wraps on a phone, so the page never scrolls sideways */
+pre.code.marked,pre.code.softwrap{white-space:pre-wrap;overflow-wrap:anywhere}   /* code with red notes beside it (marked), or long lines in a narrow place (softwrap): it wraps on a phone, so the page never scrolls sideways */
 pre.code .pen-note{margin-left:14px}
-@media (max-width:600px){pre.code .pn-more{display:none}}   /* on a phone the red note keeps only its first words, so it stays beside its tag */
+@media (max-width:600px){pre.code .pn-more{display:none}}   /* on a phone the red note keeps only its first words */
+pre.code.marked{max-width:none}   /* code with red notes may use the whole width, so a note stays beside its line (this wins over .read) */
+@media (max-width:1180px){   /* on a smaller screen each red note goes under its line, with an arrow that points up at it */
+  pre.code.marked .pen-note{width:100%;margin:2px 0 6px}
+  pre.code.marked .pen-note::before{width:16px;height:20px;clip-path:polygon(33% 100%,33% 44%,0 44%,50% 0,100% 44%,67% 44%,67% 100%)}
+}
 pre.code .cm{color:var(--dim)}
 pre.code.prompt{white-space:pre-wrap;overflow-wrap:anywhere}
 .steps-head{margin:14px 0 8px}   /* a title over steps that repeat a walkthrough */
@@ -185,3 +194,24 @@ table.tagrow th[scope="row"]{white-space:nowrap}
 .btn-done:hover{--fill:color-mix(in srgb,var(--ok) 18%,var(--paper))}
 .btn-done[aria-pressed="true"]{--fill:var(--ok);color:#06131a}
 .pager{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---------- Learn it with Copilot: the three activities under "If you cannot explain the code" (Portfolio detectives) ---------- */
+.try-intro{margin:10px 0}
+details.reveal details.reveal{padding:10px 14px}   /* a part to open inside another one: a little less padding, so a phone keeps room for the code */
+details.reveal.try > summary{color:var(--track)}
+.wordbox{border:1px dashed var(--line-2);padding:8px 12px;margin:0 0 12px;line-height:1.8}
+.gaps p{line-height:2.2;margin:0 0 6px}
+input.gap{font:inherit;width:12ch;max-width:100%;padding:0 6px;margin:0 2px;border:0;border-bottom:2px solid var(--line-2);background:var(--paper);color:var(--ink)}
+input.gap:focus{outline:2px solid var(--track);outline-offset:1px}
+input.gap.is-right{border-bottom-color:var(--ok);background:var(--ok-bg)}
+input.gap.is-wrong{border-bottom-color:var(--bad);background:var(--bad-bg)}
+.gaps .btnrow{margin-top:10px}
+
+/* the fix in red pen, under the answer of a quiz (Bug hunt) */
+.q-why pre.code{font-weight:400;margin:8px 0 0}
+.q-why .fix-head{margin:10px 0 0}
+
+@media (max-width:600px){   /* on a phone the three activities use the room of the bullet too, so their code is not squeezed */
+  details.reveal details.reveal{padding:8px 10px}
+  details.reveal li > details.reveal,details.reveal li > .try-intro{margin-left:-1.3em}
+}

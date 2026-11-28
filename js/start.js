@@ -39,6 +39,7 @@ initSaved();
 refreshPractice();     // the word counters and checkers read the saved text once
 $$('.maker').forEach(maker => maker.paint());
 initQuizzes();
+initGaps();
 initBoxModel();
 initDemos();
 initLooks();
