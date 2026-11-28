@@ -759,9 +759,10 @@ I have [1 day / 1 week] to add this to my own page.</pre>
           <li><b>If you cannot explain the code, it is not yours yet.</b> Type it yourself, change it, and ask again until every line makes sense.
             <!-- Three activities to open, right under this rule (her note of 27 November, 22:36): choose the explanation, fill the gaps in the explanation,
                  explain it yourself. The code uses only the HTML of Missions 04 to 07. Each one has its answers, and a prompt for more practice.
-                 Activities 1 and 2: the prompt gives Copilot the link to this website and asks it for new HTML at the same level, then the same
-                 kind of question (her note of 28 November, 07:25: not the code from the chat). The address is the Link in her README.
-                 Activity 3 still asks about the code from the student's own chat: explaining that code is the point of the rule above. -->
+                 Activities 1 and 2: the prompt asks Copilot for new HTML at the same level, then the same kind of question (her note of
+                 28 November, 07:25: not the code from the chat). The level is described in the prompt, from what the solo track teaches in
+                 Missions 03 to 14, with no link to the site (her note of 28 November, 09:13).
+                 Activity 3 works the same way: Copilot gives a new short example, the student explains it, Copilot checks (her note of 28 November, 09:16). -->
             <p class="try-intro">Can you explain it? Practise with these three activities. They use the HTML from Missions&nbsp;04 to 07, and each one has the answers. Then each one gives you a prompt, so that you can practise more with Copilot.</p>
             <details class="reveal try">
               <summary><span class="act-num">Activity 1</span> Choose the right explanation</summary>
@@ -790,9 +791,11 @@ I have [1 day / 1 week] to add this to my own page.</pre>
                   <p class="q-why" hidden><code>a</code> is short for anchor, and <code>href</code> (hypertext reference) says where the link goes. The visitor sees only the words “See the code”. The GitHub page opens when they click them.</p>
                 </fieldset>
               </div>
-              <p class="prompt-head"><b>More practice with Copilot.</b> Copy this prompt into Copilot. The link shows Copilot the website that you learn on, so it can write new HTML at your level. Then it asks you the same kind of question. When you finish, type: <i>Another one, please.</i></p>
-              <pre class="code prompt" id="look2-try-1">Be my web design teacher. I am a beginner, and I am learning HTML on this website: https://monikapietruch-uob.github.io/web-dev-project-sem-1/
-Write a new short piece of HTML at my level, 4 to 6 lines. Use only headings, paragraphs, lists, links and images, like the HTML missions on that website. No CSS and no JavaScript.
+              <p class="prompt-head"><b>More practice with Copilot.</b> Copy this prompt into Copilot. The prompt tells Copilot what you have learned so far, so it can write new HTML at your level. Then it asks you the same kind of question. When you finish, type: <i>Another one, please.</i></p>
+              <pre class="code prompt" id="look2-try-1">Be my web design teacher. I am a foundation year student and a beginner in coding. So far I know only this:
+HTML: the page skeleton (html, head, title, body), headings h1 and h2, paragraphs, lists (ul, ol, li), links (a with href), images (img with src and alt), figure and figcaption, comments, and the page parts header, main, section and footer.
+CSS: rules with a selector, a property and a value, color and background-color with hex codes, font-family, margin, padding, border, border-radius and classes.
+Write a new short piece of HTML at my level, 4 to 6 lines. Use only the HTML from my list. No CSS and no JavaScript.
 Then choose one line. Give me three short explanations of that line, labelled A, B and C. Only one of them is right. Do not tell me which one. Wait for my answer, then tell me if I am right, and why the other two explanations are wrong.</pre>
               <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-try-1">Copy the prompt</button></p>
             </details>
@@ -819,9 +822,11 @@ Then choose one line. Give me three short explanations of that line, labelled A,
                 <p>1 heading, 2 unordered, 3 item, 4 link, 5 where, 6 text, 7 indentation, 8 closes.</p>
                 <p>The extra word is <b>ordered</b>: an ordered list starts with <code>&lt;ol&gt;</code>, and the browser shows numbers.</p>
               </details>
-              <p class="prompt-head"><b>More practice with Copilot.</b> Copy this prompt into Copilot. The link shows Copilot the website that you learn on, so it can write new HTML at your level. Then it makes a gap-fill like this one. When you finish, type: <i>Another one, please.</i></p>
-              <pre class="code prompt" id="look2-try-2">Be my web design teacher. I am a beginner, and I am learning HTML on this website: https://monikapietruch-uob.github.io/web-dev-project-sem-1/
-Write a new short piece of HTML at my level, 4 to 6 lines. Use only headings, paragraphs, lists, links and images, like the HTML missions on that website. No CSS and no JavaScript.
+              <p class="prompt-head"><b>More practice with Copilot.</b> Copy this prompt into Copilot. The prompt tells Copilot what you have learned so far, so it can write new HTML at your level. Then it makes a gap-fill like this one. When you finish, type: <i>Another one, please.</i></p>
+              <pre class="code prompt" id="look2-try-2">Be my web design teacher. I am a foundation year student and a beginner in coding. So far I know only this:
+HTML: the page skeleton (html, head, title, body), headings h1 and h2, paragraphs, lists (ul, ol, li), links (a with href), images (img with src and alt), figure and figcaption, comments, and the page parts header, main, section and footer.
+CSS: rules with a selector, a property and a value, color and background-color with hex codes, font-family, margin, padding, border, border-radius and classes.
+Write a new short piece of HTML at my level, 4 to 6 lines. Use only the HTML from my list. No CSS and no JavaScript.
 Then explain it line by line, one short sentence for each line, but leave out one important word in each sentence and write ____ instead. Under the sentences, list the missing words in a mixed-up order. Wait for my answers, then check them.</pre>
               <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-try-2">Copy the prompt</button></p>
             </details>
@@ -846,14 +851,17 @@ Then explain it line by line, one short sentence for each line, but leave out on
                 </ol>
                 <p>Your words can be different, and that is the point. If you can say it in your own words, you understand it.</p>
               </details>
-              <p class="prompt-head"><b>Now with your own code.</b> Explain the code from your Copilot chat in the same way. Then copy this prompt into the same chat, and put your explanation where the square brackets are.</p>
-              <pre class="code prompt" id="look2-try-3">I will explain the code that you gave me in this chat, line by line, in my own words. Check my explanation. For each line, tell me if it is right. If it is not, explain my mistake in simple English. Do not rewrite the code, and do not give me new code.
-My explanation: [paste your explanation here]</pre>
+              <p class="prompt-head"><b>More practice with Copilot.</b> Copy this prompt into Copilot. It gives you a new short example at your level. Explain it line by line, in your own words, the same way as above, and send your explanation. Copilot checks it. When you finish, type: <i>Another one, please.</i></p>
+              <pre class="code prompt" id="look2-try-3">Be my web design teacher. I am a foundation year student and a beginner in coding. So far I know only this:
+HTML: the page skeleton (html, head, title, body), headings h1 and h2, paragraphs, lists (ul, ol, li), links (a with href), images (img with src and alt), figure and figcaption, comments, and the page parts header, main, section and footer.
+CSS: rules with a selector, a property and a value, color and background-color with hex codes, font-family, margin, padding, border, border-radius and classes.
+Give me a new short example of HTML at my level, 4 to 6 lines, and I will explain the code line by line, in my own words. Use only the HTML from my list. No CSS and no JavaScript. Do not explain the code yourself.
+When I send my explanation, check it. For each line, tell me if it is right. If it is not, explain my mistake in simple English. Do not rewrite the code.</pre>
               <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-try-3">Copy the prompt</button></p>
             </details>
           </li>
-          <!-- Her words for the rule about marked work (her note of 27 November, 22:36). -->
-          <li><b>In your future studies, you have to ask every lecturer about their policy on AI and coding, and stick to it.</b> The policy can be different in every unit, and even in every assignment, so read the brief too. If AI is allowed, say that you used it, and how. You are responsible for what you hand in.</li>
+          <!-- Her words for the rule about marked work (her note of 27 November, 22:36); the rule itself in red (her note of 28 November, 09:16). -->
+          <li><b>In your future studies, <span class="in-red">you have to ask every lecturer about their policy on AI and coding, and stick to it.</span></b> The policy can be different in every unit, and even in every assignment, so read the brief too. If AI is allowed, say that you used it, and how. You are responsible for what you hand in.</li>
         </ul>
       </details>
     </div>
@@ -957,6 +965,8 @@ My explanation: [paste your explanation here]</pre>
             </div>
           </div>
         </figure>
+        <!-- A heading that says the steps are for later (her note of 28 November, 09:18). -->
+        <p class="steps-head"><b>In the future, in VS Code:</b></p>
         <ol>
           <li>Open an empty file whose name ends in <code>.html</code>, and type <code>!</code> (an exclamation mark).</li>
           <li>A small list appears, with <code>!</code> at the top. Beside it, the box <b>Emmet Abbreviation</b> shows the skeleton that VS Code is ready to write.</li>

@@ -70,6 +70,8 @@ a.strip-end:hover{color:var(--ink)}
 .callout.rule > b:first-child{font-size:18px}
 .callout.rule .slip-pair ul{margin:0;padding-left:1.2em}
 .callout.rule .rule-end{margin:14px 0 0;font-weight:600}   /* the friendly last words after the two lists */
+.callout .steps-head{margin:14px 0 4px}   /* a short heading just above a numbered list in a callout (the VS Code tip, Mission 03) */
+.in-red{color:var(--mark)}   /* a few words in red pen inside normal text (Use Copilot fairly: ask every lecturer) */
 .prompt-head{margin:16px 0 6px}   /* the name of a prompt, before its code box (Learn it with Copilot: the steps and the three activities) */
 pre.code{background:var(--code-bg);color:var(--code-ink);border:1px solid var(--line);padding:14px 16px;overflow-x:auto;font-size:16px;line-height:1.5;margin:0 0 1em;tab-size:2}
 pre.code code{background:none;padding:0;font-size:inherit;color:inherit}
@@ -199,9 +201,9 @@ table.tagrow th[scope="row"]{white-space:nowrap}
 /* ---------- Learn it with Copilot: the three activities under "If you cannot explain the code" (Portfolio detectives) ---------- */
 .try-intro{margin:10px 0}
 details.reveal details.reveal{padding:10px 14px}   /* a part to open inside another one: a little less padding, so a phone keeps room for the code */
-details.reveal.try{border:1px solid var(--line-2);border-top:5px solid var(--mark);margin:22px 0 0}   /* each activity starts with a red bar and a red badge, so three open ones do not blend */
+details.reveal.try{border:1px solid var(--line-2);border-top:5px solid var(--mark);margin:22px 0 0}   /* each activity starts with a red bar and an aqua badge, so three open ones do not blend (her note of 28 November, 09:12: only the line red) */
 details.reveal.try > summary{color:var(--ink)}
-details.reveal.try > summary .act-num{display:inline-block;background:var(--mark);color:var(--paper);font-weight:800;font-size:.8em;letter-spacing:.06em;text-transform:uppercase;padding:2px 10px;margin-right:6px;border-radius:3px}
+details.reveal.try > summary .act-num{display:inline-block;background:var(--track);color:var(--paper);font-weight:800;font-size:.8em;letter-spacing:.06em;text-transform:uppercase;padding:2px 10px;margin-right:6px;border-radius:3px}
 .wordbox{border:1px dashed var(--line-2);padding:8px 12px;margin:0 0 12px;line-height:1.8}
 .gaps p{line-height:2.2;margin:0 0 6px}
 input.gap{font:inherit;width:12ch;max-width:100%;padding:0 6px;margin:0 2px;border:0;border-bottom:2px solid var(--line-2);background:var(--paper);color:var(--ink)}
