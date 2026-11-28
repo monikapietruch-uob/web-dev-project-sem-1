@@ -667,10 +667,12 @@
     <div class="block" data-label="Learn it with Copilot">
       <p class="read">You have Microsoft Copilot through the university. It is an AI chat, and it can be a patient teacher. It can explain an idea that you like, show you a small version of it in HTML and CSS, and make the code simpler until you understand every line. It never sighs when you ask again.</p>
       <!-- The first rule, in a red frame at the top (her note of 27 November, 22:25): beginners should never ask AI to do the task for them;
-           faster, but you forget; the child who uses AI for every sum; the basics still have to be learned. -->
+           faster, but you forget; the child who uses AI for every sum; the basics still have to be learned.
+           Her note of 28 November, 07:05: just "Think of a child", and a friendly ending after the two lists that appeals to their common sense
+           and to their wish to learn properly. -->
       <div class="callout rule read"><b>The first rule: do not ask AI to do the task for you</b>
         <p>Yes, it would be faster. You would also forget all of it by next week. Even the part where it was faster.</p>
-        <p>If you have children, or you remember being one, think of a child in primary school who asks AI for every sum. Seven plus five? AI. Six times eight? AI. The homework is perfect, and the child is very proud. Then come fractions, percentages and long division, and the child is lost, because the basics are not there. Nobody can build on numbers that they never learned.</p>
+        <p>Think of a child in primary school who asks AI for every sum. Seven plus five? AI. Six times eight? AI. The homework is perfect, and the child is very proud. Then come fractions, percentages and long division, and the child is lost, because the basics are not there. Nobody can build on numbers that they never learned.</p>
         <p>HTML and CSS are your seven plus five. Layout, JavaScript, Python and every job interview with a coding test stand on them. So AI is welcome, but as a teacher, not as a ghost writer. You write the code. AI helps you understand it.</p>
         <div class="slip-pair">
           <div><p class="label ok">Ask it to</p><ul>
@@ -687,6 +689,7 @@
             <li>answer the checkpoint questions</li>
           </ul></div>
         </div>
+        <p class="rule-end">You already know this, really. You came to university to understand how things work, not just to get them done, so let AI help you learn more, not think less. Your future self, in your first coding interview, will be very glad that you did.</p>
       </div>
       <!-- "Who you are" means you as a student: what you study, and that you are a beginner (her note of 27 November, 22:27). -->
       <p class="read">A <b>prompt</b> is the message that you type to the AI. First tell it who you are as a student: for example, that you study computer science and that you are a beginner. It does not need your name. Then tell it what you know, what you want and how much time you have. The prompts are in the steps below: copy one, then change the parts in square brackets.</p>
@@ -695,7 +698,7 @@
            Checked in Microsoft's help on 27 November 2026: Snipping Tool opens from Start (type snipping tool) or with Windows logo key + Shift + S;
            choose the snipping mode, then New; after a snip, Windows 11 saves it in the Screenshots folder. -->
       <ol class="steps read">
-        <li><b>Find a new portfolio.</b> Go back to the list <a href="https://github.com/emmabostian/developer-portfolios">developer-portfolios on GitHub</a> (the same list as in Find a fourth, above) and choose a portfolio that you have not looked at yet.</li>
+        <li><b>Find a new portfolio.</b> Go back to the list <a href="https://github.com/emmabostian/developer-portfolios">developer-portfolios on GitHub</a> and choose a portfolio that you have not looked at yet.</li>
         <li><b>Choose two ideas that you like</b> on that portfolio, and write them in this box, one on each line. For example: “the projects are cards with a picture”, or “a button at the top jumps to the contact details”.
           <div class="field">
             <label for="look2-ideas">Two ideas that I like</label>
@@ -750,11 +753,13 @@ I have [1 day / 1 week] to add this to my own page.</pre>
           <li><b>Check what it tells you.</b> AI makes mistakes, and it sometimes invents tags that do not exist. Try the code, and ask your tutor if something looks strange.</li>
           <li><b>If you cannot explain the code, it is not yours yet.</b> Type it yourself, change it, and ask again until every line makes sense.
             <!-- Three activities to open, right under this rule (her note of 27 November, 22:36): choose the explanation, fill the gaps in the explanation,
-                 explain it yourself. The code uses only the HTML of Missions 04 to 07. Each one has its answers, and a prompt that makes Copilot
-                 do the same with the code in the student's own chat. -->
-            <p class="try-intro">Can you explain it? Practise with these three activities. They use the HTML from Missions&nbsp;04 to 07, and each one has the answers. Then each one gives you a prompt, so that Copilot can do the same with the code in your own chat.</p>
+                 explain it yourself. The code uses only the HTML of Missions 04 to 07. Each one has its answers, and a prompt for more practice.
+                 Activities 1 and 2: the prompt gives Copilot the link to this website and asks it for new HTML at the same level, then the same
+                 kind of question (her note of 28 November, 07:25: not the code from the chat). The address is the Link in her README.
+                 Activity 3 still asks about the code from the student's own chat: explaining that code is the point of the rule above. -->
+            <p class="try-intro">Can you explain it? Practise with these three activities. They use the HTML from Missions&nbsp;04 to 07, and each one has the answers. Then each one gives you a prompt, so that you can practise more with Copilot.</p>
             <details class="reveal try">
-              <summary>Activity 1: Choose the right explanation</summary>
+              <summary><span class="act-num">Activity 1</span> Choose the right explanation</summary>
               <p>Copilot gave you this code for a project card. Below are three explanations of the picture line and three of the link line. Only one of each is right. AI sometimes gives explanations like the wrong ones, so learn to spot them.</p>
 <pre class="code softwrap"><code>&lt;h2&gt;My first web page&lt;/h2&gt;
 &lt;img src="images/cat.jpg" alt="A ginger cat asleep on a laptop"&gt;
@@ -780,12 +785,14 @@ I have [1 day / 1 week] to add this to my own page.</pre>
                   <p class="q-why" hidden><code>a</code> is short for anchor, and <code>href</code> (hypertext reference) says where the link goes. The visitor sees only the words “See the code”. The GitHub page opens when they click them.</p>
                 </fieldset>
               </div>
-              <p class="prompt-head"><b>Now with your own code.</b> Copy this prompt into your Copilot chat from step 5. Copilot makes the same kind of question about the code that it gave you.</p>
-              <pre class="code prompt" id="look2-try-1">Take the code that you gave me in this chat. Choose one line. Give me three short explanations of that line, labelled A, B and C. Only one of them is right. Do not tell me which one. Wait for my answer, then tell me if I am right, and why the other two explanations are wrong.</pre>
+              <p class="prompt-head"><b>More practice with Copilot.</b> Copy this prompt into Copilot. The link shows Copilot the website that you learn on, so it can write new HTML at your level. Then it asks you the same kind of question. When you finish, type: <i>Another one, please.</i></p>
+              <pre class="code prompt" id="look2-try-1">Be my web design teacher. I am a beginner, and I am learning HTML on this website: https://monikapietruch-uob.github.io/web-dev-project-sem-1/
+Write a new short piece of HTML at my level, 4 to 6 lines. Use only headings, paragraphs, lists, links and images, like the HTML missions on that website. No CSS and no JavaScript.
+Then choose one line. Give me three short explanations of that line, labelled A, B and C. Only one of them is right. Do not tell me which one. Wait for my answer, then tell me if I am right, and why the other two explanations are wrong.</pre>
               <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-try-1">Copy the prompt</button></p>
             </details>
             <details class="reveal try">
-              <summary>Activity 2: Fill the gaps in the explanation</summary>
+              <summary><span class="act-num">Activity 2</span> Fill the gaps in the explanation</summary>
               <p>You asked Copilot to explain this code, one line at a time. Some words are missing from its explanation. Type them in the gaps, and choose from the words in the box. One word is extra.</p>
 <pre class="code softwrap"><code>&lt;h2&gt;Find me online&lt;/h2&gt;
 &lt;ul&gt;
@@ -807,12 +814,14 @@ I have [1 day / 1 week] to add this to my own page.</pre>
                 <p>1 heading, 2 unordered, 3 item, 4 link, 5 where, 6 text, 7 indentation, 8 closes.</p>
                 <p>The extra word is <b>ordered</b>: an ordered list starts with <code>&lt;ol&gt;</code>, and the browser shows numbers.</p>
               </details>
-              <p class="prompt-head"><b>Now with your own code.</b> Copy this prompt into your Copilot chat. Copilot makes a gap-fill like this one about its own code.</p>
-              <pre class="code prompt" id="look2-try-2">Take the code that you gave me in this chat. Explain it line by line, one short sentence for each line, but leave out one important word in each sentence and write ____ instead. Under the sentences, list the missing words in a mixed-up order. Wait for my answers, then check them.</pre>
+              <p class="prompt-head"><b>More practice with Copilot.</b> Copy this prompt into Copilot. The link shows Copilot the website that you learn on, so it can write new HTML at your level. Then it makes a gap-fill like this one. When you finish, type: <i>Another one, please.</i></p>
+              <pre class="code prompt" id="look2-try-2">Be my web design teacher. I am a beginner, and I am learning HTML on this website: https://monikapietruch-uob.github.io/web-dev-project-sem-1/
+Write a new short piece of HTML at my level, 4 to 6 lines. Use only headings, paragraphs, lists, links and images, like the HTML missions on that website. No CSS and no JavaScript.
+Then explain it line by line, one short sentence for each line, but leave out one important word in each sentence and write ____ instead. Under the sentences, list the missing words in a mixed-up order. Wait for my answers, then check them.</pre>
               <p class="btnrow"><button type="button" class="btn small" data-copy-text="look2-try-2">Copy the prompt</button></p>
             </details>
             <details class="reveal try">
-              <summary>Activity 3: Explain it yourself</summary>
+              <summary><span class="act-num">Activity 3</span> Explain it yourself</summary>
               <p>Now you are the teacher. Explain this code to a classmate, one short sentence for each line. Use your own words.</p>
 <pre class="code softwrap"><code>&lt;figure&gt;
   &lt;img src="images/sofa.jpg" alt="Somebody asleep on a sofa under a striped blanket"&gt;
@@ -862,7 +871,7 @@ My explanation: [paste your explanation here]</pre>
 <article class="view task" id="s-html-1" data-track="solo" data-stage="html" data-title="The skeleton of a page" data-mins="10" data-level="revise">
   <div class="wrap">
     <div class="block" data-label="Look">
-      <p class="read">Every web page has the same skeleton. You do not learn it by heart. You copy it, and then you write in two places. In the code, the two places are highlighted.</p>
+      <p class="read">Every web page has the same skeleton. You do not learn it by heart. You copy it, and then you write two things of your own: the title and the body. In the code, they are highlighted.</p>
       <div class="codelook">
 <pre class="code"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -880,8 +889,8 @@ My explanation: [paste your explanation here]</pre>
       </div>
       <div class="cards3 full">
         <div class="site"><p class="label">Copy</p><h3>The skeleton</h3><p>Every line that is not highlighted, from <code>&lt;!DOCTYPE html&gt;</code> at the top to <code>&lt;/html&gt;</code> at the bottom. These lines are the same on every page. Nobody types them from memory. Everybody copies them.</p></div>
-        <div class="site"><p class="label">Place 1</p><h3>The title</h3><p>The words between <code>&lt;title&gt;</code> and <code>&lt;/title&gt;</code>. They are the name of the page. You see them on the browser tab, not on the page. The big “Robin Vale” on the page is <b>not</b> the title. It is a heading, and you write it between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code> (Place 2).</p></div>
-        <div class="site"><p class="label">Place 2</p><h3>The body</h3><p>Everything between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code>. This is the page that visitors see. Here it is one heading, the big “Robin Vale”, and one paragraph.</p></div>
+        <div class="site"><p class="label">You write</p><h3>The title</h3><p>The words between <code>&lt;title&gt;</code> and <code>&lt;/title&gt;</code>. They are the name of the page. You see them on the browser tab, not on the page. The big “Robin Vale” on the page is <b>not</b> the title. It is a heading, and you write it between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code>.</p></div>
+        <div class="site"><p class="label">You write</p><h3>The body</h3><p>Everything between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code>. This is the page that visitors see. Here it is one heading, the big “Robin Vale”, and one paragraph.</p></div>
       </div>
       <!-- Look closely: html, head and body in red pen, like the list tags in Mission 05 (her note of 27 November, 22:41: more places with this kind of explanation). -->
       <p class="read"><b>Look closely.</b> The skeleton has two big parts, the head and the body. Each one has a tag at its start and a tag at its end, and the whole page sits between <code>&lt;html&gt;</code> and <code>&lt;/html&gt;</code>. These tags are easy to miss, so here is the same code again, with them in red.</p>
@@ -889,14 +898,14 @@ My explanation: [paste your explanation here]</pre>
 <span class="hl-red">&lt;html lang="en"&gt;</span><span class="pen-note">The page starts.<span class="pn-more">en = English</span></span>
   <span class="hl-red">&lt;head&gt;</span><span class="pen-note">The head starts.<span class="pn-more">Facts about the page, not on the page.</span></span>
     &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;<span class="hl">Robin Vale | Portfolio</span>&lt;/title&gt;<span class="pen-note">Place 1</span>
+    &lt;title&gt;<span class="hl">Robin Vale | Portfolio</span>&lt;/title&gt;<span class="pen-note">You write this: the name on the tab.</span>
   <span class="hl-red">&lt;/head&gt;</span><span class="pen-note">The head ends.</span>
   <span class="hl-red">&lt;body&gt;</span><span class="pen-note">The body starts.<span class="pn-more">Everything that people see.</span></span>
-    <span class="hl">&lt;h1&gt;Robin Vale&lt;/h1&gt;</span><span class="pen-note">Place 2</span>
+    <span class="hl">&lt;h1&gt;Robin Vale&lt;/h1&gt;</span><span class="pen-note">You write this: what people see.</span>
     <span class="hl">&lt;p&gt;I study computer science.&lt;/p&gt;</span>
   <span class="hl-red">&lt;/body&gt;</span><span class="pen-note">The body ends.</span>
 <span class="hl-red">&lt;/html&gt;</span><span class="pen-note">The page ends.</span></code></pre>
-      <p class="read">Later you will make files of your own. Start each one with the skeleton. This button copies it, with the two places empty.</p>
+      <p class="read">Later you will make files of your own. Start each one with the skeleton. This button copies it, with the title and the body empty.</p>
 <pre id="skeleton-text" hidden>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
@@ -913,8 +922,9 @@ My explanation: [paste your explanation here]</pre>
            suggestions, and Enter (or Tab) writes the skeleton. The paragraph about the two small differences (viewport, Document) is gone,
            and in its place a drawing of exactly what VS Code shows, with no details about the differences (her notes of 27 November,
            22:38 and 22:39, with her screenshot of VS Code). -->
-      <div class="callout tip read"><b>Later, in VS Code: let it write the skeleton</b>
-        <p>When you start working in VS Code, you will not need to copy the skeleton. VS Code can write it for you, with a helper called Emmet. This is what you will see:</p>
+      <!-- Her note of 28 November, 07:28: not "Later" twice in a row; say that this is for reference only, and that VS Code comes in future missions. -->
+      <div class="callout tip read"><b>Just so you know: VS Code can write the skeleton for you</b>
+        <p>This is for reference only, so you do not need to do it now. You will work in VS Code in future missions. Then you will not need to copy the skeleton: VS Code can write it for you, with a helper called Emmet. This is what you will see:</p>
         <figure class="vsx" role="img" aria-label="VS Code with a file called index.html. On line 1 is an exclamation mark. A red note says: you type it. Under it is a small list with two lines, an exclamation mark, which is chosen, and three exclamation marks. A red note says: press Enter or Tab. Beside the list, a box called Emmet Abbreviation shows the skeleton of a page: DOCTYPE html, html lang en, head, meta charset UTF-8, meta viewport, title Document, the end of the head, body, the end of the body and the end of html.">
           <div class="vsx-win" aria-hidden="true">
             <div class="vs-tabs"><span class="on">index.html</span></div>
@@ -967,7 +977,7 @@ My explanation: [paste your explanation here]</pre>
       </div>
     </div>
     <div class="block" data-label="Practise">
-      <p class="read">The skeleton is already in the editor. You write in the two places. Type the lines, or copy them from the example above and change the words.</p>
+      <p class="read">The skeleton is already in the editor. You write the title and the body. Type the lines, or copy them from the example above and change the words.</p>
       <ol class="steps read">
         <li>Line 5: between <code>&lt;title&gt;</code> and <code>&lt;/title&gt;</code>, type a name for your page. Watch the small tab above the result. Your words appear there, and not on the page.</li>
         <li>Line 8: type <code>&lt;h1&gt;</code>, then your name, then <code>&lt;/h1&gt;</code>.</li>

@@ -45,6 +45,7 @@
   --s-ink:#14213d; --s-ink-2:#4a5672; --s-line:#d3d7e3; --s-red:#c8102e; --s-ok:#156b3c; --s-ok-bg:#e0f3e7;
 }
 body{--stage:var(--track)}   /* said again here, so that it follows the colour of the page you are on */
+html,body{overflow-anchor:none}   /* a part that opens keeps its title where it is, and opens downwards (Chrome otherwise holds a lower part still and pushes the title up, out of view) */
 body[data-track="team"]{--track:var(--team);--alt:var(--cyan)}
 body[data-track="yours"]{--track:var(--yours)}
 body[data-track="notes"]{--track:var(--notes)}

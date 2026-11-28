@@ -22,7 +22,9 @@ const BACK_TO = { solo: 'the solo track', team: 'the team track', yours: 'Make i
 // To open a track for the students, delete its name from this list.
 // The seven names are: 'solo', 'team', 'yours', 'notes', 'next', 'lang', 'path'.
 // ---------------------------------------------------------------------
-const LOCKED = ['team', 'yours', 'notes', 'next', 'lang', 'path'];
+// Everything is open while the tutor checks the tasks (28 November 2026). To lock the tracks again, as before:
+// const LOCKED = ['team', 'yours', 'notes', 'next', 'lang', 'path'];
+const LOCKED = [];
 const LOCK_TEXT = 'This area will unlock soon.';
 // The tutor's preview opens the locked tracks in one browser only (see setPreview, further down).
 let PREVIEW = false;
@@ -32,7 +34,9 @@ const isLocked = track => !PREVIEW && LOCKED.indexOf(track) !== -1;
 // and so is the checkpoint of every stage that is not fully open. Write the address of the LAST OPEN task.
 // To open more, write a later task. To open the whole track, delete its line.
 // Solo: open up to Mission 18, Put your page online (s-git-4). Decided on 25 November 2026.
-const OPEN_UNTIL = { solo: 's-git-4' };
+// Everything is open while the tutor checks the tasks (28 November 2026). To stop Solo at Mission 18 again, as before:
+// const OPEN_UNTIL = { solo: 's-git-4' };
+const OPEN_UNTIL = {};
 
 // The address of the Tech Practice Hub, for the Python tasks. Links with data-practice-hub use it.
 const PRACTICE_HUB_URL = 'https://cefl-foundation.github.io/tech/';
